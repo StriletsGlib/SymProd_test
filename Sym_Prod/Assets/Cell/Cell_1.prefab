@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 5056518657262971009}
   - component: {fileID: -3129152814845189696}
   - component: {fileID: -5947219198424931720}
+  - component: {fileID: -4271199847066791196}
   m_Layer: 0
-  m_Name: Pupil 512
+  m_Name: Cell_1
   m_TagString: cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,3 +118,24 @@ MonoBehaviour:
   energy_count: 0
   energy_max: 0
   state: pregen
+--- !u!50 &-4271199847066791196
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348167350658978602}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 1
+  m_AngularDrag: 1
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

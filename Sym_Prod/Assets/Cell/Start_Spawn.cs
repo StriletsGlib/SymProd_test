@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cell_Spawn : MonoBehaviour
+public class Start_Spawn : MonoBehaviour
 {
     // Start is called before the first frame update
     public int num = 5;

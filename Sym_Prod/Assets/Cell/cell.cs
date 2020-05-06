@@ -20,9 +20,10 @@ public class Cell : MonoBehaviour
     {
         genCell();
     }
-    void EatFood(){
+    public void EatFood(){
         energy_count= energy_count + 1;
         if (energy_count>energy_max) {energy_count = energy_max;}
+        Debug.Log("what?");
     }
     void Update()
     {
