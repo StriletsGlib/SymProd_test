@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cell_spawn : MonoBehaviour
+public class Cell_Spawn : MonoBehaviour
 {
     // Start is called before the first frame update
     public int num = 5;

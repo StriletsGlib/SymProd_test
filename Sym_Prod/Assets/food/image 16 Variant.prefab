@@ -26,19 +26,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.28, y: 2.56}
   m_EdgeRadius: 0
---- !u!114 &7043900933533752021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872807078494737271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb54df618c4210344b5b863096ce0ac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  a: 0
 --- !u!1001 &6309403812934320848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,6 +42,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652595099435405735, guid: 5770ce2358716bc4c9b23ce76c91d5f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: food
       objectReference: {fileID: 0}
     - target: {fileID: 7703284067532657933, guid: 5770ce2358716bc4c9b23ce76c91d5f1,
         type: 3}
