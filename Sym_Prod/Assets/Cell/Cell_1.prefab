@@ -138,4 +138,5 @@ MonoBehaviour:
   energy_divided: 0
   energy_count: 0
   energy_max: 0
-  state: pregen
+  cellBody: {fileID: 7348167350658978602}
+  state: generated

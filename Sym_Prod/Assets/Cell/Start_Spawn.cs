@@ -30,6 +30,5 @@ public class Start_Spawn : MonoBehaviour
         randY = Random.Range(-borderY, borderY);
         spawnPlace = new Vector2(randX, randY);
         Instantiate(cellBody, spawnPlace, Quaternion.identity);
-
     }
 }
