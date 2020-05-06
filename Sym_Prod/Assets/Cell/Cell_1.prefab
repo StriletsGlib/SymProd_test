@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2342543800775542255}
   - component: {fileID: 5056518657262971009}
   - component: {fileID: -3129152814845189696}
-  - component: {fileID: -5947219198424931720}
   - component: {fileID: -4271199847066791196}
+  - component: {fileID: -6772761926264412389}
   m_Layer: 0
   m_Name: Cell_1
   m_TagString: cell
@@ -100,24 +100,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.24
---- !u!114 &-5947219198424931720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7348167350658978602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b1fca2fa05ca4ba68fd7de1afa54122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sight: 0
-  jump_leanght: 0
-  energy_divided: 0
-  energy_count: 0
-  energy_max: 0
-  state: pregen
 --- !u!50 &-4271199847066791196
 Rigidbody2D:
   serializedVersion: 4
@@ -139,3 +121,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-6772761926264412389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348167350658978602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1fca2fa05ca4ba68fd7de1afa54122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sight: 0
+  jump_leanght: 0
+  energy_divided: 0
+  energy_count: 0
+  energy_max: 0
+  state: pregen
