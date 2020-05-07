@@ -39,7 +39,7 @@ public class Cell : MonoBehaviour
     private void Start()
     {
         if (state == "generated") {genCell();}
-        hunger = (int)((sight + jump_leanght)*4 + gene_stability/30);
+        hunger = (int)((sight + jump_leanght)*7.5 + gene_stability/25);
     }
     private void Inherit(float inhereted_sight, float inhereted_jump_leanght, int inhereted_energy_divided, int inhereted_energy_count, int inhereted_gene_stability){
         sight = inhereted_sight;
