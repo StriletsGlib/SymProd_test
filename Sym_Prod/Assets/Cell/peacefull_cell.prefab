@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6093689470693125443}
   - component: {fileID: 6093689470693125440}
   m_Layer: 0
-  m_Name: 2020-05-07 23.33.11
+  m_Name: peacefull_cell
   m_TagString: Peacefull_Cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,13 +147,13 @@ MonoBehaviour:
   sight: 0
   jump_leanght: 0
   food_min: 400
-  food_max: 1000
+  food_max: 500
   energy_divided: 0
   energy_count: 0
   energy_max: 0
   gene_stability: 0
   hunger: 0
-  cellBody: {fileID: 0}
+  cellBody: {fileID: 6093689470693125441}
   state: generated
 --- !u!50 &6093689470693125440
 Rigidbody2D:
