@@ -12,7 +12,7 @@ public class Cell : MonoBehaviour
     {
         sight = (float)Random.Range(10, 30) / 100;
         jump_leanght = (float)Random.Range(1, 30) / 100;
-        energy_divided = Random.Range(60000, 100000);
+        energy_divided = Random.Range(600, 100000);
         energy_count = Random.Range(50000, 75000);
         energy_max = 100000;
         gene_stability = Random.Range(10, 50);
