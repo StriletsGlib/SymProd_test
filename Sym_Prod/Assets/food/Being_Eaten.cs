@@ -9,7 +9,7 @@ public class Being_Eaten : MonoBehaviour
         if (collision.gameObject.CompareTag("cell"))
         {
             Cell consumer = collision.GetComponent<Cell>();
-            Debug.Log("Deus");
+            //Debug.Log("Deus");
             consumer.EatFood();
             Destroy(gameObject);
         }

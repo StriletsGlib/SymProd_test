@@ -23,7 +23,6 @@ public class Start_Spawn : MonoBehaviour
     float randX, randY;
     Vector2 spawnPlace;
     public float borderY, borderX;
-    float nextSpawn = 0;
     private void spawn()
     {
         randX = Random.Range(-borderX, borderX);
