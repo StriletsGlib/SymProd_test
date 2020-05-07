@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7158175870479721885}
   m_Layer: 0
   m_Name: Attacking_Cell
-  m_TagString: Untagged
+  m_TagString: Attacking_Cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   energy_max: 0
   gene_stability: 0
   hunger: 0
-  cellBody: {fileID: 0}
+  cellBody: {fileID: 7743315368189013050}
   state: generated
 --- !u!50 &4099295220715390431
 Rigidbody2D:

@@ -4,6 +4,7 @@ using UnityEngine;
 public class Cell : MonoBehaviour
 {
     public float sight, jump_leanght;
+    public int food_min=400, food_max=1000;
     public int energy_divided, energy_count, energy_max, gene_stability, hunger;
     public GameObject cellBody;
     public string state = "generated";
@@ -62,7 +63,7 @@ public class Cell : MonoBehaviour
         //a.GetComponent<Position>();
     }
     public void EatFood(){
-        energy_count= energy_count + Random.Range(400, 1000);
+        energy_count= energy_count + Random.Range(food_min, food_max);
         if (energy_count>energy_max) {energy_count = energy_max;}
         //Debug.Log("what?");
     }
