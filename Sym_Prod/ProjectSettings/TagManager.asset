@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Food
+  - Peacefull_Cell
+  - Attacking_Cell
   - cell
-  - food
   layers:
   - Default
   - TransparentFX

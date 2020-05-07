@@ -98,6 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sight: 0
   jump_leanght: 0
+  food_min: 400
+  food_max: 1000
   energy_divided: 0
   energy_count: 0
   energy_max: 0
