@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,7 +19,10 @@ public class Spawn : MonoBehaviour
             randY = Random.Range(-borderY, borderY);
             spawnPlace = new Vector2(randX, randY);
             Instantiate(cellBody, spawnPlace, Quaternion.identity);
-           
+            //GameObject body = Instantiate(cellBody, spawnPlace, Quaternion.identity);
+            //GameWorld a = GetComponent<GameWorld>();
+            //Food_Exist food1 = body.GetComponent<Food_Exist>();
+            
         }
     }
 }

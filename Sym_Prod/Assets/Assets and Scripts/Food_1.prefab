@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b043358ebc88402a9bc64bca39591ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tag: Peacefull_Cell
+  whatTag: Peacefull_Cell
   itIsACell: 0
 --- !u!1001 &6309403812934320848
 PrefabInstance:
@@ -68,7 +68,7 @@ PrefabInstance:
     - target: {fileID: 5652595099435405735, guid: 5770ce2358716bc4c9b23ce76c91d5f1,
         type: 3}
       propertyPath: m_Layer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5652595099435405735, guid: 5770ce2358716bc4c9b23ce76c91d5f1,
         type: 3}

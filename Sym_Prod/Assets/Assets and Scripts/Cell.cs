@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public abstract class Cell : MonoBehaviour
 {
+    int number = 0;
     public float sight, jump_leanght;
     public int food_min=400, food_max=1000;
     public int energy_divided, energy_count, energy_max, gene_stability, hunger;
@@ -10,11 +11,11 @@ public abstract class Cell : MonoBehaviour
     public GameObject divisionBody;
     public string state = "generated";
     public float hunger_modifier = 1;
-    
+    public NN network = new NN();
     public void GenCell()
     {
         sight = (float)Random.Range(10, 30) / 100;
-        jump_leanght = (float)Random.Range(1, 30) / 100;
+        jump_leanght = (float)Random.Range(10, 30) / 100;
         energy_divided = Random.Range(12000, 100000);
         energy_count = Random.Range(50000, 75000);
         energy_max = 100000;
@@ -37,11 +38,12 @@ public abstract class Cell : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    // Update is called once per frame
     private void Start()
     {
+        network.GenNN();
         if (state == "generated") {GenCell();}
         hunger = (int)(((sight + jump_leanght)*7.5 + gene_stability/25)*hunger_modifier);
+        Debug.Log("xd");
     }
     private void Inherit(float inhereted_sight, float inhereted_jump_leanght, int inhereted_energy_divided, int inhereted_energy_count, int inhereted_gene_stability){
         sight = inhereted_sight;
@@ -73,6 +75,7 @@ public abstract class Cell : MonoBehaviour
     }
     void Update()
     {
+        ThinkAndMove();
         if(energy_count>=energy_divided){Division();}
         Hunger();
     }
@@ -85,5 +88,29 @@ public abstract class Cell : MonoBehaviour
         if (energy_count <0){
             Destroy(gameObject);
         }
+    }
+    public void See(){
+        
+        
+        
+    }
+    public void ThinkAndMove(){
+        //NN network = new NN();
+        float[] k = new float[8];
+        for(int i = 0; i < 8; i = i + 1){
+            k[i] =((float)Random.Range(-100, 100)) / 100;
+        }
+        float[] res = network.think(k);
+        float movex = (res[0] - res[1])*100;
+        float movey = (res[2] - res[3])*100;
+        //if (movex > 0) movex = 1;
+        //if (movex < 0) movex = -1;
+        //if (movey > 0) movey = 1;
+        //if (movey < 0) movey = -1;
+        //Debug.Log("mx"+movex);
+        //Debug.Log("my"+movey);
+        
+        Vector2 place = new Vector2(movex + transform.position.x, movey +transform.position.y);
+        transform.position = Vector2.MoveTowards(transform.position, place, jump_leanght * Time.deltaTime);
     }
 }

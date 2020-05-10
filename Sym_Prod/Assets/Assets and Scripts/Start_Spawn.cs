@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Start_Spawn : MonoBehaviour
 {
-    // Start is called before the first frame update
     public int num = 5;
     void Start()
     {

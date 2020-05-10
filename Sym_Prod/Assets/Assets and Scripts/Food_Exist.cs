@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Food_Exist : MonoBehaviour
 {
+    public int number = 0;
     // Start is called before the first frame update
     public int time;
     void Start()
