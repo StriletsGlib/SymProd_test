@@ -7,7 +7,8 @@ TagManager:
   - Food
   - Peacefull_Cell
   - Attacking_Cell
-  - cell
+  - Black_Hole
+  - Game_World
   layers:
   - Default
   - TransparentFX

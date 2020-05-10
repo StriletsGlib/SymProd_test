@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public abstract class Cell : MonoBehaviour
 {
-    int number = 0;
+    //int number = 0;
     public float sight, jump_leanght;
     public int food_min=400, food_max=1000;
     public int energy_divided, energy_count, energy_max, gene_stability, hunger;
@@ -14,11 +14,11 @@ public abstract class Cell : MonoBehaviour
     public NN network = new NN();
     public void GenCell()
     {
-        sight = (float)Random.Range(10, 30) / 100;
+        sight = (float)Random.Range(10, 300) / 100;
         jump_leanght = (float)Random.Range(10, 30) / 100;
-        energy_divided = Random.Range(12000, 100000);
+        energy_divided = Random.Range(75000, 100000);
         energy_count = Random.Range(50000, 75000);
-        energy_max = 100000;
+        energy_max = 1000000;
         gene_stability = Random.Range(10, 50);
     }
     void Mutate(){
@@ -34,7 +34,9 @@ public abstract class Cell : MonoBehaviour
         if (RandomChance(gene_stability)){
             gene_stability = gene_stability + (Random.Range(10, 15) - Random.Range(10, 15));
         }
+        network.mutate(gene_stability);
         if((sight*jump_leanght*(energy_divided-minimum_energy_divided+1))<=0){
+            ClearFromWorld();
             Destroy(gameObject);
         }
     }
@@ -56,13 +58,17 @@ public abstract class Cell : MonoBehaviour
     private void SetState(string newState){
         state = newState;
     }
-    private void Division(){
+    public virtual void sendToList(GameObject what){
+        Debug.Log("hey hey, people!");
+    }
+     private void Division(){
         GameObject newObject = Instantiate(divisionBody);
         energy_count = energy_count/2;
         Cell dividedCell = newObject.GetComponent<Cell>();
         dividedCell.Inherit(sight, jump_leanght, energy_divided, energy_count, gene_stability);
         dividedCell.SetState("divided");
         dividedCell.Mutate();
+        sendToList(newObject);
         //Debug.Log(dividedCell.sight);
         //a.GetComponent<Position>();
     }
@@ -83,26 +89,31 @@ public abstract class Cell : MonoBehaviour
         int r = Random.Range(0, 100);
         return (max>=r);
     }
+    virtual public void ClearFromWorld(){}
     void Hunger(){
         energy_count = energy_count - hunger;
         if (energy_count <0){
+            ClearFromWorld();
             Destroy(gameObject);
         }
-    }
-    public void See(){
-        
-        
-        
     }
     public void ThinkAndMove(){
         //NN network = new NN();
         float[] k = new float[8];
-        for(int i = 0; i < 8; i = i + 1){
-            k[i] =((float)Random.Range(-100, 100)) / 100;
-        }
+        Game_World world;
+        world = GameObject.Find("GameWorld_1").GetComponent<Game_World>();
+        k = world.searching(gameObject);
+        //for (int i = 0; i<6; i++){
+        //    if(k[i]>=sight) k[i] = 0;
+        //    k[i] = k[i]/sight;
+        //}
+        //k[6] = (float)energy_count / (float)energy_max;
+        //k[7] = (float)energy_count / (float)energy_divided;
+        k[6] = 0;
+        k[7] = 0;
         float[] res = network.think(k);
-        float movex = (res[0] - res[1])*100;
-        float movey = (res[2] - res[3])*100;
+        float movex = (res[0] - res[1])*1000;
+        float movey = (res[2] - res[3])*1000;
         //if (movex > 0) movex = 1;
         //if (movex < 0) movex = -1;
         //if (movey > 0) movey = 1;
@@ -111,6 +122,6 @@ public abstract class Cell : MonoBehaviour
         //Debug.Log("my"+movey);
         
         Vector2 place = new Vector2(movex + transform.position.x, movey +transform.position.y);
-        transform.position = Vector2.MoveTowards(transform.position, place, jump_leanght * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, place, jump_leanght*10 * Time.deltaTime);
     }
 }

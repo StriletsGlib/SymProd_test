@@ -16,12 +16,16 @@ public class Being_Eaten : MonoBehaviour
                 Cell consumer = collision.GetComponent<Cell>();
                 //Debug.Log("AAA!");
                 Cell itself = gameObject.GetComponent<Cell>();
+                itself.ClearFromWorld();
                 //Debug.Log("BBB");
                 consumer.EatFood(itself.energy_count);
             }
             else{
                 Cell consumer = collision.GetComponent<Cell>();
                 consumer.EatFood();
+                Game_World world;
+                world = GameObject.Find("GameWorld_1").GetComponent<Game_World>();
+                world.foods.Remove(gameObject);
             }
             Destroy(gameObject);
         }

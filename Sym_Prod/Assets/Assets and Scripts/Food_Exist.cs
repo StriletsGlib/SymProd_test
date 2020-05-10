@@ -11,13 +11,24 @@ public class Food_Exist : MonoBehaviour
     {
         
     }
+    ~Food_Exist(){
+        ClearFromWorld();
+    }
     void Depleeting(){
         time = time - 1;
+    }
+    public void ClearFromWorld(){
+        Game_World world;
+        world = GameObject.Find("GameWorld_1").GetComponent<Game_World>();
+        world.foods.Remove(gameObject);
     }
     // Update is called once per frame
     void Update()
     {
         time = time - 1;
-        if (time<0){Destroy(gameObject);}
+        if (time<0){
+            ClearFromWorld();
+            Destroy(gameObject);
+        }
     }
 }
