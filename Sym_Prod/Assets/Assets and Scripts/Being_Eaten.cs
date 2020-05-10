@@ -8,19 +8,22 @@ public class Being_Eaten : MonoBehaviour
     public bool itIsACell = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Debug.Log("Deus");
         if (collision.gameObject.CompareTag(whatTag))
         {
-            Cell consumer = collision.GetComponent<Cell>();
-            //Debug.Log("Deus");
-            consumer.EatFood();
-            if(itIsACell){
-                CendEnergy(consumer);
-            };
+            //Debug.Log("Vault");
+            if (itIsACell){
+                Cell consumer = collision.GetComponent<Cell>();
+                //Debug.Log("AAA!");
+                Cell itself = gameObject.GetComponent<Cell>();
+                //Debug.Log("BBB");
+                consumer.EatFood(itself.energy_count);
+            }
+            else{
+                Cell consumer = collision.GetComponent<Cell>();
+                consumer.EatFood();
+            }
             Destroy(gameObject);
         }
-    }
-    void CendEnergy(Cell consumer){
-        Cell itself = gameObject.GetComponent<Cell>();
-        consumer.energy_count= consumer.energy_count + itself.energy_count/10;
     }
 }

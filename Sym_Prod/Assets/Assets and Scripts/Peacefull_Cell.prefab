@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6093689470693125445}
   - component: {fileID: 6093689470693125442}
   - component: {fileID: 6093689470693125443}
-  - component: {fileID: -7136836740363963899}
   - component: {fileID: 6093689470693125440}
   m_Layer: 0
   m_Name: Peacefull_Cell
@@ -131,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b043358ebc88402a9bc64bca39591ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tag: Attacking_Cell
+  whatTag: Attacking_Cell
   itIsACell: 1
 --- !u!114 &6093689470693125443
 MonoBehaviour:
@@ -142,32 +141,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 6093689470693125441}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b1fca2fa05ca4ba68fd7de1afa54122, type: 3}
+  m_Script: {fileID: 11500000, guid: 80a018700ab234b56be3f2c908a3bee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sight: 0
   jump_leanght: 0
   food_min: 400
-  food_max: 500
+  food_max: 1000
   energy_divided: 0
   energy_count: 0
   energy_max: 0
   gene_stability: 0
   hunger: 0
-  cellBody: {fileID: 6093689470693125441}
+  minimum_energy_divided: 12000
+  divisionBody: {fileID: 6093689470693125441}
   state: generated
---- !u!114 &-7136836740363963899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6093689470693125441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb3658bbc05c14e499792cdb9f2532f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   hunger_modifier: 2
 --- !u!50 &6093689470693125440
 Rigidbody2D:

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 119055932124895295}
   - component: {fileID: 4099295220715390431}
   - component: {fileID: -7158175870479721885}
-  - component: {fileID: -1503688959498707067}
   m_Layer: 0
   m_Name: Attacking_Cell
   m_TagString: Attacking_Cell
@@ -94,7 +93,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7743315368189013050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b1fca2fa05ca4ba68fd7de1afa54122, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e72f79f12c6d495ba93dbd869ad3faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sight: 0
@@ -106,8 +105,10 @@ MonoBehaviour:
   energy_max: 0
   gene_stability: 0
   hunger: 0
-  cellBody: {fileID: 7743315368189013050}
+  minimum_energy_divided: 12000
+  divisionBody: {fileID: 7743315368189013050}
   state: generated
+  hunger_modifier: 2
 --- !u!50 &4099295220715390431
 Rigidbody2D:
   serializedVersion: 4
@@ -142,19 +143,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.1325555, y: 0}
   serializedVersion: 2
   m_Radius: 1.12
---- !u!114 &-1503688959498707067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7743315368189013050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb3658bbc05c14e499792cdb9f2532f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hunger_modifier: 2
