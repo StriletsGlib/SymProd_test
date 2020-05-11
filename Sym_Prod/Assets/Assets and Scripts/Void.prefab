@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8204352280773982020}
   - component: {fileID: 239585496064225383}
   - component: {fileID: 7998060920899768388}
-  - component: {fileID: -3024807204729315020}
+  - component: {fileID: 8474071771739582237}
   m_Layer: 0
   m_Name: Void
   m_TagString: Black_Hole
@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9dc34d9b5f2644a39ba5ce959397dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &-3024807204729315020
-BoxCollider2D:
+--- !u!58 &8474071771739582237
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -109,15 +109,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.24, y: 2.24}
-    newSize: {x: 2.24, y: 2.24}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.24, y: 2.24}
-  m_EdgeRadius: 0
+  m_Radius: 1.12

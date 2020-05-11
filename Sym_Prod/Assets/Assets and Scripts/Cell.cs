@@ -6,7 +6,7 @@ public abstract class Cell : MonoBehaviour
     //int number = 0;
     public float sight, jump_leanght;
     public int food_min=400, food_max=1000;
-    public int energy_divided, energy_count, energy_max, gene_stability, hunger;
+    public int energy_divided = 999999, energy_count = -1, energy_max = 999999, gene_stability = 999999, hunger = 999999;
     public int minimum_energy_divided = 12000;
     public GameObject divisionBody;
     public string state = "generated";
@@ -14,12 +14,32 @@ public abstract class Cell : MonoBehaviour
     public NN network = new NN();
     public void GenCell()
     {
-        sight = (float)Random.Range(10, 300) / 100;
+        sight = (float)Random.Range(100, 300) / 100;
         jump_leanght = (float)Random.Range(10, 30) / 100;
         energy_divided = Random.Range(75000, 100000);
         energy_count = Random.Range(50000, 75000);
         energy_max = 1000000;
         gene_stability = Random.Range(10, 50);
+        state = "gen";
+        network = new NN();
+        network.GenNN();
+        hunger = (int)(((sight + jump_leanght)*1.5 + gene_stability/25)*hunger_modifier);
+    }
+    public void CellInfoGet(CellInfo copied_cell){
+        sight = copied_cell.sight;
+        jump_leanght = copied_cell.jump_leanght;
+        food_min = copied_cell.food_min;
+        food_max = copied_cell.food_max;
+        energy_divided = copied_cell.energy_divided;
+        energy_count = copied_cell.energy_count;
+        energy_max = copied_cell.energy_max;
+        gene_stability = copied_cell.gene_stability;
+        hunger = copied_cell.hunger;
+        minimum_energy_divided = copied_cell.minimum_energy_divided;
+        divisionBody = copied_cell.divisionBody;
+        state = copied_cell.state;
+        hunger_modifier = copied_cell.hunger_modifier;
+        network = new NN(copied_cell.network);
     }
     void Mutate(){
         if (RandomChance(gene_stability)){
@@ -40,19 +60,23 @@ public abstract class Cell : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
     private void Start()
     {
-        network.GenNN();
         if (state == "generated") {GenCell();}
         hunger = (int)(((sight + jump_leanght)*7.5 + gene_stability/25)*hunger_modifier);
         Debug.Log("xd");
     }
-    private void Inherit(float inhereted_sight, float inhereted_jump_leanght, int inhereted_energy_divided, int inhereted_energy_count, int inhereted_gene_stability){
+    public void RegenerateEnergy(){
+        energy_count = Random.Range(50000, 75000);
+    }
+    private void Inherit(float inhereted_sight, float inhereted_jump_leanght, int inhereted_energy_divided, int inhereted_energy_count, int inhereted_gene_stability, NN net){
         sight = inhereted_sight;
         jump_leanght = inhereted_jump_leanght;
         energy_divided = inhereted_energy_divided;
         energy_count = inhereted_energy_count;
         gene_stability = inhereted_gene_stability;
+        network = new NN(net);
         //Debug.Log("hey!");
     }
     private void SetState(string newState){
@@ -65,7 +89,7 @@ public abstract class Cell : MonoBehaviour
         GameObject newObject = Instantiate(divisionBody);
         energy_count = energy_count/2;
         Cell dividedCell = newObject.GetComponent<Cell>();
-        dividedCell.Inherit(sight, jump_leanght, energy_divided, energy_count, gene_stability);
+        dividedCell.Inherit(sight, jump_leanght, energy_divided, energy_count, gene_stability, network);
         dividedCell.SetState("divided");
         dividedCell.Mutate();
         sendToList(newObject);
@@ -81,6 +105,7 @@ public abstract class Cell : MonoBehaviour
     }
     void Update()
     {
+        if (state == "generated") {GenCell();}
         ThinkAndMove();
         if(energy_count>=energy_divided){Division();}
         Hunger();
@@ -98,30 +123,13 @@ public abstract class Cell : MonoBehaviour
         }
     }
     public void ThinkAndMove(){
-        //NN network = new NN();
         float[] k = new float[8];
         Game_World world;
         world = GameObject.Find("GameWorld_1").GetComponent<Game_World>();
         k = world.searching(gameObject);
-        //for (int i = 0; i<6; i++){
-        //    if(k[i]>=sight) k[i] = 0;
-        //    k[i] = k[i]/sight;
-        //}
-        //k[6] = (float)energy_count / (float)energy_max;
-        //k[7] = (float)energy_count / (float)energy_divided;
-        k[6] = 0;
-        k[7] = 0;
         float[] res = network.think(k);
-        float movex = (res[0] - res[1])*1000;
-        float movey = (res[2] - res[3])*1000;
-        //if (movex > 0) movex = 1;
-        //if (movex < 0) movex = -1;
-        //if (movey > 0) movey = 1;
-        //if (movey < 0) movey = -1;
-        //Debug.Log("mx"+movex);
-        //Debug.Log("my"+movey);
-        
-        Vector2 place = new Vector2(movex + transform.position.x, movey +transform.position.y);
+        //float[] res = new float[2];
+        Vector2 place = new Vector2(res[0]*1000 + transform.position.x, res[1]*1000 +transform.position.y);
         transform.position = Vector2.MoveTowards(transform.position, place, jump_leanght*10 * Time.deltaTime);
     }
 }

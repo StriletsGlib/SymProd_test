@@ -7,7 +7,6 @@ public class Attacking_Cell : Cell
     // Start is called before the first frame update
     private void Start()
     {
-        network.GenNN();
         if (state == "generated") {GenCell();}
         hunger = (int)(((sight + jump_leanght)*7.5 + gene_stability/25)*hunger_modifier);
     }
