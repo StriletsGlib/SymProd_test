@@ -1,0 +1,20 @@
+Peacefull_Cell
+ sight= 2.72000000 jump_leanght= 0.16000000 food_min= 400 food_max= 1000 energy_divided= 94040 energy_max = 1000000 gene_stability= 48 minimum_energy_divided= 12000 hunger_modifier = 1.20000000
+Peacefull_Cell
+ sight= 2.93000000 jump_leanght= 0.19000000 food_min= 400 food_max= 1000 energy_divided= 76355 energy_max = 1000000 gene_stability= 43 minimum_energy_divided= 12000 hunger_modifier = 1.20000000
+Peacefull_Cell
+ sight= 1.32000000 jump_leanght= 0.10000000 food_min= 400 food_max= 1000 energy_divided= 78079 energy_max = 1000000 gene_stability= 38 minimum_energy_divided= 12000 hunger_modifier = 1.20000000
+Peacefull_Cell
+ sight= 2.18000000 jump_leanght= 0.15000000 food_min= 400 food_max= 1000 energy_divided= 88242 energy_max = 1000000 gene_stability= 14 minimum_energy_divided= 12000 hunger_modifier = 1.20000000
+Peacefull_Cell
+ sight= 2.45000000 jump_leanght= 0.12000000 food_min= 400 food_max= 1000 energy_divided= 84098 energy_max = 1000000 gene_stability= 32 minimum_energy_divided= 12000 hunger_modifier = 1.20000000
+Peacefull_Cell
+ sight= 1.31000000 jump_leanght= 0.29000000 food_min= 400 food_max= 1000 energy_divided= 97070 energy_max = 1000000 gene_stability= 29 minimum_energy_divided= 12000 hunger_modifier = 1.20000000
+Peacefull_Cell
+ sight= 1.44000000 jump_leanght= 0.10000000 food_min= 400 food_max= 1000 energy_divided= 83768 energy_max = 1000000 gene_stability= 16 minimum_energy_divided= 12000 hunger_modifier = 1.20000000
+Attacking_Cell
+ sight= 1.80000000 jump_leanght= 0.10000000 food_min= 400 food_max= 1000 energy_divided= 91977 energy_max = 1000000 gene_stability= 47 minimum_energy_divided= 12000 hunger_modifier = 2.00000000
+Attacking_Cell
+ sight= 1.33000000 jump_leanght= 0.21000000 food_min= 400 food_max= 1000 energy_divided= 89879 energy_max = 1000000 gene_stability= 10 minimum_energy_divided= 12000 hunger_modifier = 2.00000000
+Attacking_Cell
+ sight= 1.45000000 jump_leanght= 0.23000000 food_min= 400 food_max= 1000 energy_divided= 87658 energy_max = 1000000 gene_stability= 31 minimum_energy_di

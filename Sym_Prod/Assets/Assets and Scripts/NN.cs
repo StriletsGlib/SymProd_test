@@ -43,8 +43,13 @@ public class NN
             intermediet[i*2 + 1] = input[i*4 + 1] * modifier[i*4 + 1] + input[i*4 +3] * modifier[i*4 +3];
             gxgy[i] = intermediet[i*2] * modifier[8 +i*2] + intermediet[i*2 + 1]* modifier[8 +i*2 + 1];
         }
-        
-        ///
         return gxgy;
+    }
+    public string GetWeights(){
+        string res = " WeightsNN= ";
+        for(int i = 0; i<12; i++){
+            res += modifier[i].ToString("0.000") + " ";
+        }
+        return res;
     }
 }

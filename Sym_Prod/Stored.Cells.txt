@@ -1,0 +1,16 @@
+Attacking_Cell
+ sight= 16.87 jump_leanght= 2.00 food_min= 400 food_max= 1000 energy_divided= 85517 energy_max = 1000000 gene_stability= 12 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= 0.877 0.311 0.251 0.288 -0.350 0.197 -0.232 0.978 0.304 -0.529 -0.041 -0.621 
+Attacking_Cell
+ sight= 10.31 jump_leanght= 1.05 food_min= 400 food_max= 1000 energy_divided= 93458 energy_max = 1000000 gene_stability= 17 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= 0.259 0.247 -0.219 -0.445 -0.129 0.445 -0.657 -0.296 0.941 -0.229 -0.379 -0.704 
+Attacking_Cell
+ sight= 16.50 jump_leanght= 1.05 food_min= 400 food_max= 1000 energy_divided= 97267 energy_max = 1000000 gene_stability= 47 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= -0.131 -0.300 -0.533 -0.723 0.786 -0.561 0.476 0.095 -0.792 -0.624 -0.552 -0.544 
+Attacking_Cell
+ sight= 16.85 jump_leanght= 2.50 food_min= 400 food_max= 1000 energy_divided= 83013 energy_max = 1000000 gene_stability= 28 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= -0.335 -0.438 -0.552 -0.179 -0.482 -0.840 0.381 0.074 0.968 0.943 0.297 -0.903 
+Attacking_Cell
+ sight= 16.83 jump_leanght= 2.00 food_min= 400 food_max= 1000 energy_divided= 85517 energy_max = 1000000 gene_stability= 12 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= 0.877 0.311 0.251 0.288 -0.350 0.197 -0.232 0.978 0.304 -0.529 -0.041 -0.621 
+Attacking_Cell
+ sight= 18.49 jump_leanght= 2.70 food_min= 400 food_max= 1000 energy_divided= 85905 energy_max = 1000000 gene_stability= 40 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= -0.891 0.035 -0.105 -0.383 -0.257 0.872 -0.374 0.488 0.671 -0.540 0.921 -0.513 
+Attacking_Cell
+ sight= 18.47 jump_leanght= 2.67 food_min= 400 food_max= 1000 energy_divided= 85906 energy_max = 1000000 gene_stability= 42 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= -0.891 0.035 -0.105 -0.383 -0.257 0.872 -0.374 0.488 0.671 -0.540 0.921 -0.513 
+Attacking_Cell
+ sight= 18.53 jump_leanght= 2.60 food_min= 400 food_m

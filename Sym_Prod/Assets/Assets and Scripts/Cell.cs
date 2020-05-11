@@ -4,6 +4,7 @@ using UnityEngine;
 public abstract class Cell : MonoBehaviour
 {
     //int number = 0;
+    public int gameSpeed = 1;
     public float sight, jump_leanght;
     public int food_min=400, food_max=1000;
     public int energy_divided = 999999, energy_count = -1, energy_max = 999999, gene_stability = 999999, hunger = 999999;
@@ -15,16 +16,17 @@ public abstract class Cell : MonoBehaviour
     Vector2 prev_Move = new Vector2(0,1);
     public void GenCell()
     {
-        sight = (float)Random.Range(100, 300) / 100;
-        jump_leanght = (float)Random.Range(10, 30) / 100;
+        sight = (float)Random.Range(1000, 3000) / 100;
+        jump_leanght = (float)Random.Range(100, 300) / 100;
         energy_divided = Random.Range(75000, 100000);
-        energy_count = Random.Range(50000, 75000);
+        //energy_count = Random.Range(50000, 75000);
+        energy_count = 50000;
         energy_max = 1000000;
         gene_stability = Random.Range(10, 50);
         state = "gen";
         network = new NN();
         network.GenNN();
-        hunger = (int)(((sight + jump_leanght)*1.5 + gene_stability/25)*hunger_modifier);
+        hunger = (int)(((sight + jump_leanght) + gene_stability/25)*hunger_modifier);
     }
     public void CellInfoGet(CellInfo copied_cell){
         sight = copied_cell.sight;
@@ -41,6 +43,7 @@ public abstract class Cell : MonoBehaviour
         state = copied_cell.state;
         hunger_modifier = copied_cell.hunger_modifier;
         network = new NN(copied_cell.network);
+        gameSpeed = copied_cell.gameSpeed;
     }
     void Mutate(){
         if (RandomChance(gene_stability)){
@@ -65,11 +68,12 @@ public abstract class Cell : MonoBehaviour
     private void Start()
     {
         if (state == "generated") {GenCell();}
-        hunger = (int)(((sight + jump_leanght)*7.5 + gene_stability/25)*hunger_modifier);
+        hunger = (int)(((sight + jump_leanght) + gene_stability/25)*hunger_modifier);
         Debug.Log("xd");
     }
     public void RegenerateEnergy(){
-        energy_count = Random.Range(50000, 75000);
+        //energy_count = Random.Range(50000, 75000);
+        energy_count = 50000;
     }
     private void Inherit(float inhereted_sight, float inhereted_jump_leanght, int inhereted_energy_divided, int inhereted_energy_count, int inhereted_gene_stability, NN net){
         sight = inhereted_sight;
@@ -77,6 +81,7 @@ public abstract class Cell : MonoBehaviour
         energy_divided = inhereted_energy_divided;
         energy_count = inhereted_energy_count;
         gene_stability = inhereted_gene_stability;
+        
         network = new NN(net);
         //Debug.Log("hey!");
     }
@@ -117,7 +122,7 @@ public abstract class Cell : MonoBehaviour
     }
     virtual public void ClearFromWorld(){}
     void Hunger(){
-        energy_count = energy_count - hunger;
+        energy_count = energy_count - hunger* gameSpeed;
         if (energy_count <0){
             ClearFromWorld();
             Destroy(gameObject);
@@ -127,14 +132,16 @@ public abstract class Cell : MonoBehaviour
         float[] k = new float[8];
         Game_World world;
         world = GameObject.Find("GameWorld_1").GetComponent<Game_World>();
-        k = world.searching(gameObject);
+        k = world.Searching(gameObject, sight);
         float[] res = network.think(k);
-        Vector2 place = new Vector2(res[0]*1000 + transform.position.x, res[1]*1000 +transform.position.y);
-        Vector2 em1 = new Vector2(res[0],res[1]);
-        float angle = Vector2.SignedAngle(prev_Move, em1);
-        transform.position = Vector2.MoveTowards(transform.position, place, jump_leanght*10 * Time.deltaTime);
-        transform.RotateAround(new Vector2(transform.position.x, transform.position.y), Vector3.forward, angle * Time.deltaTime);
-        //transform.RotateAround(new Vector2(transform.position.x, transform.position.y), Vector3.forward, angle);
-        prev_Move = em1;
+        Vector2 movement_vector = new Vector2(res[0], res[1]);
+        movement_vector.Normalize();
+        Vector2 place = new Vector2(res[0] + transform.position.x, res[1] +transform.position.y);
+        float angle = Vector2.SignedAngle(prev_Move, movement_vector);
+        transform.position = Vector2.MoveTowards(transform.position, place, jump_leanght* Time.deltaTime * gameSpeed);
+        //Quaternion stand_in = transform.rotation;
+        //stand_in.RotateAround(new Vector2(transform.position.x, transform.position.y), Vector3.forward, angle);
+        transform.RotateAround(new Vector2(transform.position.x, transform.position.y), Vector3.forward, angle);
+        prev_Move = movement_vector;
     }
 }

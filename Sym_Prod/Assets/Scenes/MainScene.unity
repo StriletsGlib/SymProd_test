@@ -272,7 +272,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 13.922918
+  orthographic size: 19.206852
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -378,12 +378,12 @@ PrefabInstance:
     - target: {fileID: 1398857409884189320, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.64
+      value: -49.7
       objectReference: {fileID: 0}
     - target: {fileID: 1398857409884189320, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1398857409884189320, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
@@ -448,17 +448,17 @@ PrefabInstance:
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
       propertyPath: cellASpawn
-      value: 8
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
       propertyPath: cellPSpawn
-      value: 16
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
       propertyPath: foodSpawnRate
-      value: 0.025
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
@@ -498,7 +498,7 @@ PrefabInstance:
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
       propertyPath: saveBestNum
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
@@ -509,7 +509,32 @@ PrefabInstance:
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
       propertyPath: xrad
-      value: 26
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
+        type: 3}
+      propertyPath: ShouldStoreCellsInFile
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
+        type: 3}
+      propertyPath: borderX
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
+        type: 3}
+      propertyPath: yrad
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
+        type: 3}
+      propertyPath: borderY
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
+        type: 3}
+      propertyPath: gameSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2156bd1f01a9449fa8101009ce04b1e8, type: 3}
