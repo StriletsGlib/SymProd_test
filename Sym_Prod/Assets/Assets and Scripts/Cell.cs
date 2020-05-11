@@ -12,6 +12,7 @@ public abstract class Cell : MonoBehaviour
     public string state = "generated";
     public float hunger_modifier = 1;
     public NN network = new NN();
+    Vector2 prev_Move = new Vector2(0,1);
     public void GenCell()
     {
         sight = (float)Random.Range(100, 300) / 100;
@@ -128,8 +129,12 @@ public abstract class Cell : MonoBehaviour
         world = GameObject.Find("GameWorld_1").GetComponent<Game_World>();
         k = world.searching(gameObject);
         float[] res = network.think(k);
-        //float[] res = new float[2];
         Vector2 place = new Vector2(res[0]*1000 + transform.position.x, res[1]*1000 +transform.position.y);
+        Vector2 em1 = new Vector2(res[0],res[1]);
+        float angle = Vector2.SignedAngle(prev_Move, em1);
         transform.position = Vector2.MoveTowards(transform.position, place, jump_leanght*10 * Time.deltaTime);
+        transform.RotateAround(new Vector2(transform.position.x, transform.position.y), Vector3.forward, angle * Time.deltaTime);
+        //transform.RotateAround(new Vector2(transform.position.x, transform.position.y), Vector3.forward, angle);
+        prev_Move = em1;
     }
 }
