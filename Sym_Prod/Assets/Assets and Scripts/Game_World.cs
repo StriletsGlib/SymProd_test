@@ -187,8 +187,8 @@ public class Game_World : MonoBehaviour
         foreach(var aCell in aCells){
             if(aCell !=watcher){
                 if(Vector3.Distance(watcher.transform.position, aCell.transform.position)<nearestDistance){
-                    coord[2] = watcher.transform.position.x - aCell.transform.position.x;
-                    coord[3] = watcher.transform.position.y - aCell.transform.position.y;
+                    coord[4] = watcher.transform.position.x - aCell.transform.position.x;
+                    coord[5] = watcher.transform.position.y - aCell.transform.position.y;
                     nearestDistance =Vector3.Distance(watcher.transform.position, aCell.transform.position);
                 }
                 
@@ -197,8 +197,8 @@ public class Game_World : MonoBehaviour
         nearestDistance = MaxDistance;
         foreach(var food in foods){
             if(Vector3.Distance(watcher.transform.position, food.transform.position)<nearestDistance){
-                coord[4] = watcher.transform.position.x - food.transform.position.x;
-                coord[5] = watcher.transform.position.y - food.transform.position.y;
+                coord[2] = watcher.transform.position.x - food.transform.position.x;
+                coord[3] = watcher.transform.position.y - food.transform.position.y;
                 nearestDistance =Vector3.Distance(watcher.transform.position, food.transform.position);
             }
         }

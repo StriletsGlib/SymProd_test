@@ -38,6 +38,8 @@ public class NN
     }
     public float[] think(float[] input){
         float[] intermediet = new float[4];
+        //string seing =(" xp "+input[0].ToString("0.00") + " yp "+ input[1].ToString("0.00") +" xf "+input[2].ToString("0.00") +" yf  "+input[3].ToString("0.00")+" xa "+input[4].ToString("0.00") +" ya  " + input[5].ToString("0.00")+" xv "+input[6].ToString("0.00") +" yv "+input[7].ToString("0.00"));
+        //Debug.Log(seing);
         for(int i = 0; i<2; i++){
             intermediet[i*2] = input[i*4] * modifier[i*4] + input[i*4 +2] * modifier[i*4 +2];
             intermediet[i*2 + 1] = input[i*4 + 1] * modifier[i*4 + 1] + input[i*4 +3] * modifier[i*4 +3];

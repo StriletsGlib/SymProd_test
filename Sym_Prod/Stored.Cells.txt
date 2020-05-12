@@ -1,16 +1,48 @@
+Peacefull_Cell
+ sight= 27.50 jump_leanght= 1.48 food_min= 1000 food_max= 1000 energy_divided= 77383 energy_max = 1000000 gene_stability= 34 minimum_energy_divided= 12000 hunger_modifier = 0.50 WeightsNN= 0.751 -0.857 -0.171 -0.713 -0.461 -0.760 -0.727 0.450 0.810 0.082 0.341 -0.734 
+
+Peacefull_Cell
+ sight= 22.82 jump_leanght= 2.22 food_min= 1000 food_max= 1000 energy_divided= 87975 energy_max = 1000000 gene_stability= 46 minimum_energy_divided= 12000 hunger_modifier = 0.50 WeightsNN= 0.972 -0.299 -0.738 0.493 0.673 -0.501 0.925 0.817 0.417 -0.054 -0.433 0.397 
+
+Peacefull_Cell
+ sight= 25.85 jump_leanght= 2.71 food_min= 1000 food_max= 1000 energy_divided= 94763 energy_max = 1000000 gene_stability= 42 minimum_energy_divided= 12000 hunger_modifier = 0.50 WeightsNN= 0.242 0.845 0.124 0.878 0.118 0.625 0.653 0.278 0.477 0.730 -0.865 0.377 
+
+Peacefull_Cell
+ sight= 13.61 jump_leanght= 1.59 food_min= 1000 food_max= 1000 energy_divided= 93232 energy_max = 1000000 gene_stability= 37 minimum_energy_divided= 12000 hunger_modifier = 0.50 WeightsNN= 0.196 -0.291 0.283 -0.543 0.768 -0.630 0.530 -0.769 0.092 0.947 -0.819 -0.839 
+
+Peacefull_Cell
+ sight= 11.81 jump_leanght= 1.30 food_min= 1000 food_max= 1000 energy_divided= 88451 energy_max = 1000000 gene_stability= 44 minimum_energy_divided= 12000 hunger_modifier = 0.50 WeightsNN= 0.772 -0.107 0.104 -0.933 -0.352 -0.973 -0.679 0.594 0.049 -0.260 0.182 -0.031 
+
+Peacefull_Cell
+ sight= 26.43 jump_leanght= 1.55 food_min= 1000 food_max= 1000 energy_divided= 84930 energy_max = 1000000 gene_stability= 29 minimum_energy_divided= 12000 hunger_modifier = 0.50 WeightsNN= -0.225 0.271 -0.548 -0.510 -0.619 -0.461 -0.337 0.544 0.082 0.552 0.763 -0.024 
+
+Peacefull_Cell
+ sight= 13.60 jump_leanght= 2.40 food_min= 1000 food_max= 1000 energy_divided= 76526 energy_max = 1000000 gene_stability= 48 minimum_energy_divided= 12000 hunger_modifier = 0.50 WeightsNN= 0.301 0.044 -0.268 -0.723 -0.071 -0.667 -0.279 0.952 0.584 -0.520 -0.227 0.123 
+
+Peacefull_Cell
+ sight= 18.69 jump_leanght= 1.14 food_min= 1000 food_max= 1000 energy_divided= 98256 energy_max = 1000000 gene_stability= 28 minimum_energy_divided= 12000 hunger_modifier = 0.50 WeightsNN= -0.515 0.259 -0.508 0.995 0.183 -0.326 -0.129 0.120 -0.232 -0.451 0.965 0.011 
+
+Peacefull_Cell
+ sight= 15.76 jump_leanght= 2.05 food_min= 1000 food_max= 1000 energy_divided= 92706 energy_max = 1000000 gene_stability= 28 minimum_energy_divided= 12000 hunger_modifier = 0.50 WeightsNN= -0.846 0.752 -0.161 0.070 -0.642 -0.242 -0.949 -0.886 0.097 0.156 -0.218 0.064 
+
+Peacefull_Cell
+ sight= 11.81 jump_leanght= 1.38 food_min= 1000 food_max= 1000 energy_divided= 76338 energy_max = 1000000 gene_stability= 39 minimum_energy_divided= 12000 hunger_modifier = 0.50 WeightsNN= 0.189 -0.691 0.430 0.376 -0.574 -0.989 0.380 -0.022 -0.113 -0.649 0.732 0.705 
+
 Attacking_Cell
- sight= 16.87 jump_leanght= 2.00 food_min= 400 food_max= 1000 energy_divided= 85517 energy_max = 1000000 gene_stability= 12 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= 0.877 0.311 0.251 0.288 -0.350 0.197 -0.232 0.978 0.304 -0.529 -0.041 -0.621 
+ sight= 10.89 jump_leanght= 2.04 food_min= 400 food_max= 1000 energy_divided= 90603 energy_max = 1000000 gene_stability= 30 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= -0.746 0.180 -0.816 0.454 -0.967 -0.174 -0.375 0.710 -0.576 0.568 -0.097 -0.219 
 Attacking_Cell
- sight= 10.31 jump_leanght= 1.05 food_min= 400 food_max= 1000 energy_divided= 93458 energy_max = 1000000 gene_stability= 17 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= 0.259 0.247 -0.219 -0.445 -0.129 0.445 -0.657 -0.296 0.941 -0.229 -0.379 -0.704 
+ sight= 11.09 jump_leanght= 1.69 food_min= 400 food_max= 1000 energy_divided= 97244 energy_max = 1000000 gene_stability= 37 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= -0.469 -0.503 -0.032 0.674 -0.237 0.020 0.608 0.284 -0.381 -0.451 -0.593 0.862 
 Attacking_Cell
- sight= 16.50 jump_leanght= 1.05 food_min= 400 food_max= 1000 energy_divided= 97267 energy_max = 1000000 gene_stability= 47 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= -0.131 -0.300 -0.533 -0.723 0.786 -0.561 0.476 0.095 -0.792 -0.624 -0.552 -0.544 
+ sight= 10.46 jump_leanght= 1.41 food_min= 400 food_max= 1000 energy_divided= 83006 energy_max = 1000000 gene_stability= 24 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= 0.699 0.145 -0.881 -0.642 -0.357 0.611 -0.699 0.284 0.833 -0.876 0.203 -0.541 
 Attacking_Cell
- sight= 16.85 jump_leanght= 2.50 food_min= 400 food_max= 1000 energy_divided= 83013 energy_max = 1000000 gene_stability= 28 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= -0.335 -0.438 -0.552 -0.179 -0.482 -0.840 0.381 0.074 0.968 0.943 0.297 -0.903 
+ sight= 11.49 jump_leanght= 2.08 food_min= 400 food_max= 1000 energy_divided= 75871 energy_max = 1000000 gene_stability= 28 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= 0.946 -0.875 0.817 0.764 0.208 -0.028 -0.220 0.957 0.734 -0.984 0.331 0.381 
 Attacking_Cell
- sight= 16.83 jump_leanght= 2.00 food_min= 400 food_max= 1000 energy_divided= 85517 energy_max = 1000000 gene_stability= 12 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= 0.877 0.311 0.251 0.288 -0.350 0.197 -0.232 0.978 0.304 -0.529 -0.041 -0.621 
+ sight= 25.58 jump_leanght= 2.88 food_min= 400 food_max= 1000 energy_divided= 81551 energy_max = 1000000 gene_stability= 46 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= 0.648 -0.087 0.887 0.313 -0.441 -0.203 0.146 0.539 -0.715 0.778 0.765 0.268 
 Attacking_Cell
- sight= 18.49 jump_leanght= 2.70 food_min= 400 food_max= 1000 energy_divided= 85905 energy_max = 1000000 gene_stability= 40 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= -0.891 0.035 -0.105 -0.383 -0.257 0.872 -0.374 0.488 0.671 -0.540 0.921 -0.513 
+ sight= 12.03 jump_leanght= 1.39 food_min= 400 food_max= 1000 energy_divided= 88358 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= -0.654 -0.781 -0.450 0.158 -0.031 -0.929 -0.510 0.987 0.191 0.340 0.579 0.681 
 Attacking_Cell
- sight= 18.47 jump_leanght= 2.67 food_min= 400 food_max= 1000 energy_divided= 85906 energy_max = 1000000 gene_stability= 42 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= -0.891 0.035 -0.105 -0.383 -0.257 0.872 -0.374 0.488 0.671 -0.540 0.921 -0.513 
+ sight= 19.70 jump_leanght= 2.72 food_min= 400 food_max= 1000 energy_divided= 92369 energy_max = 1000000 gene_stability= 25 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= -0.266 0.825 0.586 -0.788 -0.012 0.321 -0.457 -0.028 -0.063 -0.529 -0.336 -0.190 
 Attacking_Cell
- sight= 18.53 jump_leanght= 2.60 food_min= 400 food_m
+ sight= 12.03 jump_leanght= 1.39 food_min= 400 food_max= 1000 energy_divided= 88358 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.00 WeightsNN= -0.654 -0.781 -0.450 0.158 -0.031 -0.929 -0.510 0.987 0.191 0.340 0.579 0.681 
+Attacking_Cell
+ sight= 
