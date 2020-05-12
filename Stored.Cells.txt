@@ -1,250 +1,198 @@
 Peacefull_Cell
- sight= 12.340 jump_leanght= 1.800 food_min= 1000 food_max= 1000 energy_divided= 79385 energy_max = 1000000 gene_stability= 38 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 16.160 jump_leanght= 2.150 food_min= 1000 food_max= 1000 energy_divided= 77283 energy_max = 1000000 gene_stability= 40 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 16.410 jump_leanght= 2.770 food_min= 1000 food_max= 1000 energy_divided= 93131 energy_max = 1000000 gene_stability= 36 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 18.230 jump_leanght= 2.080 food_min= 1000 food_max= 1000 energy_divided= 83284 energy_max = 1000000 gene_stability= 35 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 28.110 jump_leanght= 2.780 food_min= 1000 food_max= 1000 energy_divided= 84091 energy_max = 1000000 gene_stability= 21 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 20.210 jump_leanght= 1.340 food_min= 1000 food_max= 1000 energy_divided= 98284 energy_max = 1000000 gene_stability= 12 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 18.020 jump_leanght= 2.300 food_min= 1000 food_max= 1000 energy_divided= 88525 energy_max = 1000000 gene_stability= 28 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 12.350 jump_leanght= 1.700 food_min= 1000 food_max= 1000 energy_divided= 96603 energy_max = 1000000 gene_stability= 28 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 29.050 jump_leanght= 1.660 food_min= 1000 food_max= 1000 energy_divided= 76054 energy_max = 1000000 gene_stability= 41 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 11.090 jump_leanght= 2.400 food_min= 1000 food_max= 1000 energy_divided= 88557 energy_max = 1000000 gene_stability= 44 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 26.680 jump_leanght= 1.690 food_min= 1000 food_max= 1000 energy_divided= 85287 energy_max = 1000000 gene_stability= 48 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 26.620 jump_leanght= 1.160 food_min= 1000 food_max= 1000 energy_divided= 98393 energy_max = 1000000 gene_stability= 23 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 26.180 jump_leanght= 1.230 food_min= 1000 food_max= 1000 energy_divided= 89142 energy_max = 1000000 gene_stability= 42 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 25.980 jump_leanght= 2.340 food_min= 1000 food_max= 1000 energy_divided= 76877 energy_max = 1000000 gene_stability= 35 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 26.220 jump_leanght= 2.910 food_min= 1000 food_max= 1000 energy_divided= 77722 energy_max = 1000000 gene_stability= 14 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 22.840 jump_leanght= 2.410 food_min= 1000 food_max= 1000 energy_divided= 98176 energy_max = 1000000 gene_stability= 48 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 11.760 jump_leanght= 1.220 food_min= 1000 food_max= 1000 energy_divided= 91418 energy_max = 1000000 gene_stability= 16 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 17.650 jump_leanght= 1.870 food_min= 1000 food_max= 1000 energy_divided= 75023 energy_max = 1000000 gene_stability= 37 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 20.980 jump_leanght= 2.490 food_min= 1000 food_max= 1000 energy_divided= 94399 energy_max = 1000000 gene_stability= 34 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 14.670 jump_leanght= 2.700 food_min= 1000 food_max= 1000 energy_divided= 85580 energy_max = 1000000 gene_stability= 41 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 19.900 jump_leanght= 0.970 food_min= 400 food_max= 1000 energy_divided= 87224 energy_max = 1000000 gene_stability= 47 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 11.830 jump_leanght= 1.480 food_min= 400 food_max= 1000 energy_divided= 81224 energy_max = 1000000 gene_stability= 17 minimum_energy_divided= 12000 hunger_modifier = 1.000
 
 Peacefull_Cell
- sight= 12.530 jump_leanght= 2.420 food_min= 400 food_max= 1000 energy_divided= 84403 energy_max = 1000000 gene_stability= 42 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 11.850 jump_leanght= 1.480 food_min= 400 food_max= 1000 energy_divided= 81224 energy_max = 1000000 gene_stability= 19 minimum_energy_divided= 12000 hunger_modifier = 1.000
 
 Peacefull_Cell
- sight= 12.510 jump_leanght= 2.440 food_min= 400 food_max= 1000 energy_divided= 84402 energy_max = 1000000 gene_stability= 42 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 14.140 jump_leanght= 2.810 food_min= 1000 food_max= 1000 energy_divided= 75996 energy_max = 1000000 gene_stability= 24 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 12.960 jump_leanght= 1.330 food_min= 400 food_max= 1000 energy_divided= 94953 energy_max = 1000000 gene_stability= 46 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 19.810 jump_leanght= 1.820 food_min= 1000 food_max= 1000 energy_divided= 76258 energy_max = 1000000 gene_stability= 43 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 18.600 jump_leanght= 1.800 food_min= 1000 food_max= 1000 energy_divided= 88439 energy_max = 1000000 gene_stability= 39 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 22.480 jump_leanght= 1.730 food_min= 1000 food_max= 1000 energy_divided= 82036 energy_max = 1000000 gene_stability= 30 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 13.930 jump_leanght= 1.020 food_min= 1000 food_max= 1000 energy_divided= 99918 energy_max = 1000000 gene_stability= 17 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 16.730 jump_leanght= 2.200 food_min= 1000 food_max= 1000 energy_divided= 94828 energy_max = 1000000 gene_stability= 33 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 25.320 jump_leanght= 1.200 food_min= 1000 food_max= 1000 energy_divided= 89313 energy_max = 1000000 gene_stability= 48 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 24.940 jump_leanght= 1.370 food_min= 1000 food_max= 1000 energy_divided= 91964 energy_max = 1000000 gene_stability= 29 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 20.050 jump_leanght= 1.660 food_min= 1000 food_max= 1000 energy_divided= 82170 energy_max = 1000000 gene_stability= 12 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 21.570 jump_leanght= 1.530 food_min= 1000 food_max= 1000 energy_divided= 91350 energy_max = 1000000 gene_stability= 38 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 10.630 jump_leanght= 2.160 food_min= 1000 food_max= 1000 energy_divided= 90199 energy_max = 1000000 gene_stability= 22 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 24.250 jump_leanght= 1.040 food_min= 1000 food_max= 1000 energy_divided= 95056 energy_max = 1000000 gene_stability= 47 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 24.160 jump_leanght= 1.430 food_min= 1000 food_max= 1000 energy_divided= 92315 energy_max = 1000000 gene_stability= 25 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 14.520 jump_leanght= 2.580 food_min= 1000 food_max= 1000 energy_divided= 82611 energy_max = 1000000 gene_stability= 23 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 13.470 jump_leanght= 2.930 food_min= 400 food_max= 1000 energy_divided= 85219 energy_max = 1000000 gene_stability= 17 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 12.640 jump_leanght= 1.830 food_min= 400 food_max= 1000 energy_divided= 90828 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
 
 Peacefull_Cell
- sight= 16.620 jump_leanght= 1.270 food_min= 400 food_max= 1000 energy_divided= 81278 energy_max = 1000000 gene_stability= 22 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 11.830 jump_leanght= 1.480 food_min= 400 food_max= 1000 energy_divided= 81224 energy_max = 1000000 gene_stability= 17 minimum_energy_divided= 12000 hunger_modifier = 1.000
 
 Peacefull_Cell
- sight= 13.080 jump_leanght= 1.320 food_min= 400 food_max= 1000 energy_divided= 83168 energy_max = 1000000 gene_stability= 49 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 11.830 jump_leanght= 1.480 food_min= 400 food_max= 1000 energy_divided= 81224 energy_max = 1000000 gene_stability= 17 minimum_energy_divided= 12000 hunger_modifier = 1.000
 
 Peacefull_Cell
- sight= 12.960 jump_leanght= 1.330 food_min= 400 food_max= 1000 energy_divided= 94953 energy_max = 1000000 gene_stability= 46 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 11.850 jump_leanght= 1.480 food_min= 400 food_max= 1000 energy_divided= 81224 energy_max = 1000000 gene_stability= 19 minimum_energy_divided= 12000 hunger_modifier = 1.000
 
 Peacefull_Cell
- sight= 14.790 jump_leanght= 2.970 food_min= 1000 food_max= 1000 energy_divided= 90235 energy_max = 1000000 gene_stability= 36 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 15.770 jump_leanght= 1.190 food_min= 1000 food_max= 1000 energy_divided= 91936 energy_max = 1000000 gene_stability= 42 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 24.340 jump_leanght= 2.850 food_min= 1000 food_max= 1000 energy_divided= 81283 energy_max = 1000000 gene_stability= 11 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 16.970 jump_leanght= 2.000 food_min= 1000 food_max= 1000 energy_divided= 95158 energy_max = 1000000 gene_stability= 11 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 23.770 jump_leanght= 2.970 food_min= 1000 food_max= 1000 energy_divided= 79480 energy_max = 1000000 gene_stability= 30 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 29.580 jump_leanght= 2.400 food_min= 1000 food_max= 1000 energy_divided= 93433 energy_max = 1000000 gene_stability= 47 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 15.350 jump_leanght= 1.130 food_min= 1000 food_max= 1000 energy_divided= 99466 energy_max = 1000000 gene_stability= 11 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 24.980 jump_leanght= 1.270 food_min= 1000 food_max= 1000 energy_divided= 97602 energy_max = 1000000 gene_stability= 47 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 25.490 jump_leanght= 1.490 food_min= 1000 food_max= 1000 energy_divided= 97923 energy_max = 1000000 gene_stability= 43 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 27.940 jump_leanght= 1.120 food_min= 1000 food_max= 1000 energy_divided= 83343 energy_max = 1000000 gene_stability= 13 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 16.760 jump_leanght= 1.130 food_min= 1000 food_max= 1000 energy_divided= 89319 energy_max = 1000000 gene_stability= 35 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 29.850 jump_leanght= 1.070 food_min= 1000 food_max= 1000 energy_divided= 85404 energy_max = 1000000 gene_stability= 33 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 21.780 jump_leanght= 1.040 food_min= 400 food_max= 1000 energy_divided= 75378 energy_max = 1000000 gene_stability= 43 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 23.140 jump_leanght= 1.220 food_min= 400 food_max= 1000 energy_divided= 79673 energy_max = 1000000 gene_stability= 11 minimum_energy_divided= 12000 hunger_modifier = 1.000
 
 Peacefull_Cell
- sight= 14.220 jump_leanght= 1.600 food_min= 400 food_max= 1000 energy_divided= 76890 energy_max = 1000000 gene_stability= 24 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 10.620 jump_leanght= 2.570 food_min= 400 food_max= 1000 energy_divided= 93616 energy_max = 1000000 gene_stability= 42 minimum_energy_divided= 12000 hunger_modifier = 1.000
 
 Peacefull_Cell
- sight= 21.680 jump_leanght= 1.980 food_min= 400 food_max= 1000 energy_divided= 89311 energy_max = 1000000 gene_stability= 13 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 12.640 jump_leanght= 1.830 food_min= 400 food_max= 1000 energy_divided= 90828 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
 
 Peacefull_Cell
- sight= 25.980 jump_leanght= 1.420 food_min= 400 food_max= 1000 energy_divided= 97890 energy_max = 1000000 gene_stability= 22 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 25.980 jump_leanght= 2.340 food_min= 1000 food_max= 1000 energy_divided= 76877 energy_max = 1000000 gene_stability= 35 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 11.760 jump_leanght= 1.220 food_min= 1000 food_max= 1000 energy_divided= 91418 energy_max = 1000000 gene_stability= 16 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 15.340 jump_leanght= 2.460 food_min= 1000 food_max= 1000 energy_divided= 89393 energy_max = 1000000 gene_stability= 46 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 18.520 jump_leanght= 1.110 food_min= 1000 food_max= 1000 energy_divided= 94697 energy_max = 1000000 gene_stability= 30 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 13.020 jump_leanght= 2.800 food_min= 1000 food_max= 1000 energy_divided= 99810 energy_max = 1000000 gene_stability= 37 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 25.430 jump_leanght= 1.300 food_min= 1000 food_max= 1000 energy_divided= 99063 energy_max = 1000000 gene_stability= 10 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 15.960 jump_leanght= 2.140 food_min= 1000 food_max= 1000 energy_divided= 92301 energy_max = 1000000 gene_stability= 38 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 12.010 jump_leanght= 2.260 food_min= 1000 food_max= 1000 energy_divided= 90002 energy_max = 1000000 gene_stability= 32 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 18.860 jump_leanght= 2.040 food_min= 1000 food_max= 1000 energy_divided= 79863 energy_max = 1000000 gene_stability= 25 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 13.190 jump_leanght= 2.470 food_min= 1000 food_max= 1000 energy_divided= 81075 energy_max = 1000000 gene_stability= 49 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 14.750 jump_leanght= 2.950 food_min= 1000 food_max= 1000 energy_divided= 97248 energy_max = 1000000 gene_stability= 37 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Peacefull_Cell
- sight= 23.530 jump_leanght= 1.910 food_min= 1000 food_max= 1000 energy_divided= 94540 energy_max = 1000000 gene_stability= 41 minimum_energy_divided= 12000 hunger_modifier = 0.500
-
-Peacefull_Cell
- sight= 23.280 jump_leanght= 2.210 food_min= 400 food_max= 1000 energy_divided= 75604 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
-
-Peacefull_Cell
- sight= 22.110 jump_leanght= 1.560 food_min= 400 food_max= 1000 energy_divided= 90221 energy_max = 1000000 gene_stability= 49 minimum_energy_divided= 12000 hunger_modifier = 1.000
-
-Peacefull_Cell
- sight= 21.780 jump_leanght= 1.040 food_min= 400 food_max= 1000 energy_divided= 75378 energy_max = 1000000 gene_stability= 43 minimum_energy_divided= 12000 hunger_modifier = 1.000
-
-Peacefull_Cell
- sight= 12.740 jump_leanght= 1.530 food_min= 400 food_max= 1000 energy_divided= 89387 energy_max = 1000000 gene_stability= 13 minimum_energy_divided= 12000 hunger_modifier = 1.000
-
-Peacefull_Cell
- sight= 20.050 jump_leanght= 1.660 food_min= 1000 food_max= 1000 energy_divided= 82170 energy_max = 1000000 gene_stability= 12 minimum_energy_divided= 12000 hunger_modifier = 0.500
-
-Peacefull_Cell
- sight= 26.180 jump_leanght= 1.230 food_min= 1000 food_max= 1000 energy_divided= 89142 energy_max = 1000000 gene_stability= 42 minimum_energy_divided= 12000 hunger_modifier = 0.500
-
-Peacefull_Cell
- sight= 13.500 jump_leanght= 2.120 food_min= 1000 food_max= 1000 energy_divided= 98160 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 0.500
-
-Peacefull_Cell
- sight= 29.190 jump_leanght= 2.060 food_min= 1000 food_max= 1000 energy_divided= 94675 energy_max = 1000000 gene_stability= 23 minimum_energy_divided= 12000 hunger_modifier = 0.500
-
-Peacefull_Cell
- sight= 26.260 jump_leanght= 2.520 food_min= 1000 food_max= 1000 energy_divided= 85548 energy_max = 1000000 gene_stability= 33 minimum_energy_divided= 12000 hunger_modifier = 0.500
-
-Peacefull_Cell
- sight= 16.670 jump_leanght= 1.040 food_min= 1000 food_max= 1000 energy_divided= 91301 energy_max = 1000000 gene_stability= 20 minimum_energy_divided= 12000 hunger_modifier = 0.500
+ sight= 16.630 jump_leanght= 1.450 food_min= 1000 food_max= 1000 energy_divided= 76611 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 0.500
 
 Attacking_Cell
- sight= 12.960 jump_leanght= 1.330 food_min= 400 food_max= 1000 energy_divided= 94953 energy_max = 1000000 gene_stability= 46 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 17.970 jump_leanght= 1.050 food_min= 400 food_max= 1000 energy_divided= 83968 energy_max = 1000000 gene_stability= 12 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 13.060 jump_leanght= 1.370 food_min= 400 food_max= 1000 energy_divided= 83168 energy_max = 1000000 gene_stability= 49 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 19.580 jump_leanght= 1.060 food_min= 400 food_max= 1000 energy_divided= 79896 energy_max = 1000000 gene_stability= 20 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 12.510 jump_leanght= 2.440 food_min= 400 food_max= 1000 energy_divided= 84402 energy_max = 1000000 gene_stability= 42 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 24.070 jump_leanght= 2.780 food_min= 400 food_max= 1000 energy_divided= 91006 energy_max = 1000000 gene_stability= 43 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 12.530 jump_leanght= 2.420 food_min= 400 food_max= 1000 energy_divided= 84403 energy_max = 1000000 gene_stability= 42 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 11.830 jump_leanght= 1.480 food_min= 400 food_max= 1000 energy_divided= 81224 energy_max = 1000000 gene_stability= 17 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 13.080 jump_leanght= 1.320 food_min= 400 food_max= 1000 energy_divided= 83168 energy_max = 1000000 gene_stability= 49 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 11.830 jump_leanght= 1.480 food_min= 400 food_max= 1000 energy_divided= 81224 energy_max = 1000000 gene_stability= 17 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 12.460 jump_leanght= 2.440 food_min= 400 food_max= 1000 energy_divided= 84402 energy_max = 1000000 gene_stability= 42 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 11.850 jump_leanght= 1.480 food_min= 400 food_max= 1000 energy_divided= 81224 energy_max = 1000000 gene_stability= 19 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 19.900 jump_leanght= 0.970 food_min= 400 food_max= 1000 energy_divided= 87224 energy_max = 1000000 gene_stability= 47 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 11.830 jump_leanght= 1.480 food_min= 400 food_max= 1000 energy_divided= 81224 energy_max = 1000000 gene_stability= 17 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 13.000 jump_leanght= 1.370 food_min= 400 food_max= 1000 energy_divided= 83166 energy_max = 1000000 gene_stability= 51 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 11.830 jump_leanght= 1.480 food_min= 400 food_max= 1000 energy_divided= 81224 energy_max = 1000000 gene_stability= 17 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 19.880 jump_leanght= 0.970 food_min= 400 food_max= 1000 energy_divided= 87226 energy_max = 1000000 gene_stability= 47 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 17.970 jump_leanght= 1.050 food_min= 400 food_max= 1000 energy_divided= 83968 energy_max = 1000000 gene_stability= 12 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 20.020 jump_leanght= 1.030 food_min= 400 food_max= 1000 energy_divided= 87224 energy_max = 1000000 gene_stability= 46 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 24.000 jump_leanght= 2.780 food_min= 400 food_max= 1000 energy_divided= 91006 energy_max = 1000000 gene_stability= 43 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 25.980 jump_leanght= 1.420 food_min= 400 food_max= 1000 energy_divided= 97890 energy_max = 1000000 gene_stability= 22 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 11.360 jump_leanght= 1.970 food_min= 400 food_max= 1000 energy_divided= 96723 energy_max = 1000000 gene_stability= 38 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 14.220 jump_leanght= 1.600 food_min= 400 food_max= 1000 energy_divided= 76890 energy_max = 1000000 gene_stability= 24 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 14.260 jump_leanght= 2.510 food_min= 400 food_max= 1000 energy_divided= 94219 energy_max = 1000000 gene_stability= 38 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 21.680 jump_leanght= 1.980 food_min= 400 food_max= 1000 energy_divided= 89311 energy_max = 1000000 gene_stability= 13 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 12.640 jump_leanght= 1.830 food_min= 400 food_max= 1000 energy_divided= 90828 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 16.620 jump_leanght= 1.270 food_min= 400 food_max= 1000 energy_divided= 81278 energy_max = 1000000 gene_stability= 22 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 11.320 jump_leanght= 1.970 food_min= 400 food_max= 1000 energy_divided= 96722 energy_max = 1000000 gene_stability= 38 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 14.220 jump_leanght= 1.600 food_min= 400 food_max= 1000 energy_divided= 76890 energy_max = 1000000 gene_stability= 24 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 12.640 jump_leanght= 1.830 food_min= 400 food_max= 1000 energy_divided= 90828 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 14.180 jump_leanght= 1.600 food_min= 400 food_max= 1000 energy_divided= 76890 energy_max = 1000000 gene_stability= 24 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 12.640 jump_leanght= 1.830 food_min= 400 food_max= 1000 energy_divided= 90828 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 14.220 jump_leanght= 1.600 food_min= 400 food_max= 1000 energy_divided= 76890 energy_max = 1000000 gene_stability= 23 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 12.640 jump_leanght= 1.830 food_min= 400 food_max= 1000 energy_divided= 90825 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 13.470 jump_leanght= 2.980 food_min= 400 food_max= 1000 energy_divided= 85221 energy_max = 1000000 gene_stability= 18 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 12.640 jump_leanght= 1.830 food_min= 400 food_max= 1000 energy_divided= 90828 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 13.470 jump_leanght= 2.930 food_min= 400 food_max= 1000 energy_divided= 85219 energy_max = 1000000 gene_stability= 17 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 11.320 jump_leanght= 1.970 food_min= 400 food_max= 1000 energy_divided= 96722 energy_max = 1000000 gene_stability= 38 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 13.450 jump_leanght= 2.980 food_min= 400 food_max= 1000 energy_divided= 85217 energy_max = 1000000 gene_stability= 18 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 12.640 jump_leanght= 1.790 food_min= 400 food_max= 1000 energy_divided= 90827 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 12.740 jump_leanght= 1.530 food_min= 400 food_max= 1000 energy_divided= 89387 energy_max = 1000000 gene_stability= 13 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 10.620 jump_leanght= 2.570 food_min= 400 food_max= 1000 energy_divided= 93616 energy_max = 1000000 gene_stability= 42 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 21.780 jump_leanght= 1.040 food_min= 400 food_max= 1000 energy_divided= 75378 energy_max = 1000000 gene_stability= 43 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 23.300 jump_leanght= 1.010 food_min= 400 food_max= 1000 energy_divided= 80515 energy_max = 1000000 gene_stability= 45 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 13.730 jump_leanght= 2.580 food_min= 400 food_max= 1000 energy_divided= 85324 energy_max = 1000000 gene_stability= 36 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 10.580 jump_leanght= 2.570 food_min= 400 food_max= 1000 energy_divided= 93616 energy_max = 1000000 gene_stability= 40 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 22.140 jump_leanght= 1.560 food_min= 400 food_max= 1000 energy_divided= 90218 energy_max = 1000000 gene_stability= 49 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 23.140 jump_leanght= 1.220 food_min= 400 food_max= 1000 energy_divided= 79673 energy_max = 1000000 gene_stability= 11 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 13.730 jump_leanght= 2.590 food_min= 400 food_max= 1000 energy_divided= 85324 energy_max = 1000000 gene_stability= 36 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 29.510 jump_leanght= 1.930 food_min= 400 food_max= 1000 energy_divided= 84161 energy_max = 1000000 gene_stability= 42 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 10.360 jump_leanght= 1.710 food_min= 400 food_max= 1000 energy_divided= 98026 energy_max = 1000000 gene_stability= 31 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 23.300 jump_leanght= 0.990 food_min= 400 food_max= 1000 energy_divided= 80515 energy_max = 1000000 gene_stability= 45 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 22.110 jump_leanght= 1.560 food_min= 400 food_max= 1000 energy_divided= 90221 energy_max = 1000000 gene_stability= 49 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 23.320 jump_leanght= 1.010 food_min= 400 food_max= 1000 energy_divided= 80515 energy_max = 1000000 gene_stability= 48 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 28.800 jump_leanght= 2.310 food_min= 400 food_max= 1000 energy_divided= 81206 energy_max = 1000000 gene_stability= 27 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 23.140 jump_leanght= 1.220 food_min= 400 food_max= 1000 energy_divided= 79673 energy_max = 1000000 gene_stability= 11 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 21.780 jump_leanght= 1.010 food_min= 400 food_max= 1000 energy_divided= 75376 energy_max = 1000000 gene_stability= 43 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 23.140 jump_leanght= 1.220 food_min= 400 food_max= 1000 energy_divided= 79673 energy_max = 1000000 gene_stability= 11 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 21.690 jump_leanght= 1.010 food_min= 400 food_max= 1000 energy_divided= 75375 energy_max = 1000000 gene_stability= 43 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 29.550 jump_leanght= 1.930 food_min= 400 food_max= 1000 energy_divided= 84164 energy_max = 1000000 gene_stability= 45 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 23.190 jump_leanght= 2.210 food_min= 400 food_max= 1000 energy_divided= 75608 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 10.550 jump_leanght= 2.210 food_min= 400 food_max= 1000 energy_divided= 96068 energy_max = 1000000 gene_stability= 28 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 29.780 jump_leanght= 1.640 food_min= 400 food_max= 1000 energy_divided= 85439 energy_max = 1000000 gene_stability= 22 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 16.730 jump_leanght= 1.610 food_min= 400 food_max= 1000 energy_divided= 92972 energy_max = 1000000 gene_stability= 40 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 11.610 jump_leanght= 2.210 food_min= 400 food_max= 1000 energy_divided= 78522 energy_max = 1000000 gene_stability= 38 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 10.620 jump_leanght= 2.250 food_min= 400 food_max= 1000 energy_divided= 82507 energy_max = 1000000 gene_stability= 49 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 23.180 jump_leanght= 2.200 food_min= 400 food_max= 1000 energy_divided= 75608 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 16.670 jump_leanght= 1.610 food_min= 400 food_max= 1000 energy_divided= 92972 energy_max = 1000000 gene_stability= 40 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 23.280 jump_leanght= 2.210 food_min= 400 food_max= 1000 energy_divided= 75604 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 10.620 jump_leanght= 2.200 food_min= 400 food_max= 1000 energy_divided= 82507 energy_max = 1000000 gene_stability= 49 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 29.780 jump_leanght= 1.650 food_min= 400 food_max= 1000 energy_divided= 85439 energy_max = 1000000 gene_stability= 22 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 21.550 jump_leanght= 2.070 food_min= 400 food_max= 1000 energy_divided= 75838 energy_max = 1000000 gene_stability= 15 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 23.280 jump_leanght= 2.210 food_min= 400 food_max= 1000 energy_divided= 75604 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 16.670 jump_leanght= 1.540 food_min= 400 food_max= 1000 energy_divided= 92975 energy_max = 1000000 gene_stability= 40 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 23.200 jump_leanght= 2.180 food_min= 400 food_max= 1000 energy_divided= 75608 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
+ sight= 10.560 jump_leanght= 2.230 food_min= 400 food_max= 1000 energy_divided= 96068 energy_max = 1000000 gene_stability= 28 minimum_energy_divided= 12000 hunger_modifier = 1.000
 Attacking_Cell
- sight= 23.180 jump_leanght= 2.200 food_min= 400 food_max= 1000 energy_divided= 75608 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
-Attacking_Cell
- sight= 23.190 jump_leanght= 2.210 food_min= 400 food_max= 1000 energy_divided= 75608 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 12000 hunger_modifier = 1.000
-Attacking_Cell
- sight= 10.080 jump_leanght= 2.240 food_min= 400 food_max= 1000 energy_divided= 92245 energy_max = 1000000 gene_stability= 29 minimum_energy_divided= 12000 hunger_modifier = 1.000
-Attacking_Cell
- sight= 12.520 jump_leanght= 1.210 food_min= 400 food_max= 1000 energy_divided= 91183 energy_max = 1000000 gene_stability= 10 minimum_energy_divided= 12000 hunger_modifier = 1.000
-Attacking_Cell
- sight= 13.200 jump_leanght= 1.950 food_min= 400 food_max= 1000 energy_divided= 93668 energy_max = 1000000 gene_stability= 35 minimum_energy_divided= 12000 hunger_modifier = 1.000
-Attacking_Cell
- sight= 16.410 jump_leanght= 1.460 food_min= 400 food_max= 1000 energy_divided= 82491 energy_max = 1000000 gene_stability= 47 minimum_energy_divided= 12000 hunger_modifier = 1.000
-Attacking_Cell
- sight= 13.170 jump_leanght= 1.950 food_min= 400 food_max= 1000 energy_divided= 93669 energy_max = 1000000 gene_stability= 39 minimum_energy_divided= 12000 hunger_modifier = 1.000
-Attacking_Cell
- sight= 10.120 jump_leanght= 2.240 food_min= 400 food_max= 1000 energy_divided= 92243 energy_max = 1000000 gene_stability= 29 minimum_energy_divided= 12000 hunger_modifier = 1.000
-Attacking_Cell
- sight= 13.200 jump_leanght= 1.950 food_min= 400 food_max= 1000 energy_divided= 93668 energy_max = 1000000 gene_stability= 33 minimum_energy_divided= 12000 hunger_modifier = 1.000
-Attacking_Cell
- sight= 13.200 jump_leanght= 1.920 food_min= 400 food_max= 1000 energy_divided= 93671 energy_max = 1000000 gene_stability= 37 minimum_energy_divided= 12000 hunger_modifier = 1.000
-Attacking_Cell
- sight= 10.050 jump_leanght= 2.240 food_min= 400 food_max= 1000 energy_divided= 92245 energy_max = 1000000 gene_stability= 29 minimum_energy_divided= 12000 hunger_modifier = 1.000
-Attacking_Cell
- sight= 16.380 jump_leanght= 1.440 food_min= 400 foo
+ sight= 21.550 jump_leanght= 2.070 food_min= 400 food_max= 1000 
