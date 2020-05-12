@@ -8,7 +8,7 @@ public class Peacefull_Cell : Cell
     {
         //network.GenNN();
         if (state == "generated") {GenCell();}
-        hunger = (int)(((sight + jump_leanght)+ gene_stability/25)*hunger_modifier);
+        hunger = (int)(((sight + jump_leanght)/10+ gene_stability/25)*hunger_modifier);
     }
     ~Peacefull_Cell(){
         //Game_World world;

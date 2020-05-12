@@ -11,13 +11,13 @@ public class Game_World : MonoBehaviour
     public string WhereToStoreCells = "Stored.Cells.txt";
     public bool ShouldStoreCellsInFile = false;
     public float borderX, borderY;
-    public List<GameObject> black_Holes = new List<GameObject>();
+    public List<GameObject> borders = new List<GameObject>();
     public List<GameObject> pCells = new List<GameObject>();
     public List<GameObject> aCells = new List<GameObject>();
     public List<GameObject> foods = new List<GameObject>();
     public List<CellInfo> bestPCells = new List<CellInfo>();
     public List<CellInfo> bestACells = new List<CellInfo>();
-    public GameObject foodBody, cellBodyP, cellBodyA, black_holeBody;
+    public GameObject foodBody, cellBodyP, cellBodyA, border_Body;
     public int cellPSpawn = 12, cellASpawn = 5;
     public int saveBestNum = 3;
     public int savedCells = 0;
@@ -27,6 +27,7 @@ public class Game_World : MonoBehaviour
     public float cellASpawnRate = 999999, cellPSpawnRate = 999999;
     public bool spawnCells = false;
     public bool restartWhenDead = false;
+    bool doBordersKill = true;
     bool needToSaveA = true;
     bool needToSaveP = true;
     bool needToSave = true;
@@ -39,9 +40,17 @@ public class Game_World : MonoBehaviour
         return spawnPlace;
         //Instantiate(cellBody, spawnPlace, Quaternion.identity);
     }
+    void getImportantInfo(){
+        ImportantData sourceOfData = GameObject.Find("Start_Data").GetComponent<ImportantData>();
+        cellPSpawn = sourceOfData.intData[0];
+        cellASpawn = sourceOfData.intData[1];
+        saveBestNum =sourceOfData.intData[2];
+        doBordersKill =sourceOfData.boolData[0];
+    }
     // Start is called before the first frame update
     void Start()
     {
+        getImportantInfo();
         //WriteCellsDown("text.txt");
         for(int dx = 0; dx<xrad; dx++){
             Vector2[] place = new Vector2[4];
@@ -49,7 +58,10 @@ public class Game_World : MonoBehaviour
             place[1] = new Vector2(dx, -yrad+1);
             place[2] = new Vector2(-dx, yrad-1);
             place[3] = new Vector2(-dx, -yrad+1);
-            for(int i = 0; i<4; i++){black_Holes.Add(Instantiate(black_holeBody,place[i], Quaternion.identity));}
+            for(int i = 0; i<4; i++){
+                GameObject border =Instantiate(border_Body,place[i], Quaternion.identity);
+                border.GetComponent<BoxCollider2D>().isTrigger =doBordersKill;
+                borders.Add(Instantiate(border_Body,place[i], Quaternion.identity));}
         }
         for(int dy = 0; dy<yrad; dy++){
             Vector2[] place = new Vector2[4];
@@ -57,7 +69,10 @@ public class Game_World : MonoBehaviour
             place[1] = new Vector2(-xrad,dy);
             place[2] = new Vector2(xrad,-dy);
             place[3] = new Vector2(-xrad,-dy);
-            for(int i = 0; i<4; i++){black_Holes.Add(Instantiate(black_holeBody,place[i], Quaternion.identity));}
+            for(int i = 0; i<4; i++){
+                GameObject border =Instantiate(border_Body,place[i], Quaternion.identity);
+                border.GetComponent<BoxCollider2D>().isTrigger =doBordersKill;
+                borders.Add(Instantiate(border_Body,place[i], Quaternion.identity));}
         }
         SpawnBasicSells();
         started = true;
@@ -203,11 +218,11 @@ public class Game_World : MonoBehaviour
             }
         }
         nearestDistance = MaxDistance;
-        foreach(var black_jole in black_Holes){
-            if(Vector3.Distance(watcher.transform.position, black_jole.transform.position)<nearestDistance){
-                coord[6] = watcher.transform.position.x - black_jole.transform.position.x;
-                coord[7] = watcher.transform.position.y - black_jole.transform.position.y;
-                nearestDistance =Vector3.Distance(watcher.transform.position, black_jole.transform.position);
+        foreach(var border in borders){
+            if(Vector3.Distance(watcher.transform.position, border.transform.position)<nearestDistance){
+                coord[6] = watcher.transform.position.x - border.transform.position.x;
+                coord[7] = watcher.transform.position.y - border.transform.position.y;
+                nearestDistance =Vector3.Distance(watcher.transform.position, border.transform.position);
             }
         }
         return coord;

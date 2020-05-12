@@ -94,9 +94,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63d2525701b746ebbe8571be6b1e0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSpeed: 1
+  WhereToStoreCells: Stored.Cells.txt
+  ShouldStoreCellsInFile: 0
   borderX: 9
   borderY: 19
-  black_Holes: []
+  borders: []
   pCells: []
   aCells: []
   foods: []
@@ -106,7 +109,7 @@ MonoBehaviour:
     type: 3}
   cellBodyA: {fileID: 7743315368189013050, guid: 988fcad2b845e4b51b3db4324ea98902,
     type: 3}
-  black_holeBody: {fileID: 1925942457194146129, guid: 2ad3d78a4b7e741a78762020db6fba50,
+  border_Body: {fileID: 824632510409466181, guid: 51d3774c17b3941d7af95093cbe6608f,
     type: 3}
   cellPSpawn: 20
   cellASpawn: 20

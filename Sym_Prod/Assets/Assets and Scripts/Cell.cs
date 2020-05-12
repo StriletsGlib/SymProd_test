@@ -68,7 +68,7 @@ public abstract class Cell : MonoBehaviour
     private void Start()
     {
         if (state == "generated") {GenCell();}
-        hunger = (int)(((sight + jump_leanght) + gene_stability/25)*hunger_modifier);
+        hunger = (int)(((sight + jump_leanght)/10 + gene_stability/25)*hunger_modifier);
         Debug.Log("xd");
     }
     public void RegenerateEnergy(){
