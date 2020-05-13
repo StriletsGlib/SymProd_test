@@ -33,6 +33,43 @@ public class Game_World : MonoBehaviour
     bool needToSaveP = true;
     bool needToSave = true;
     bool started = false;
+    float[,] findThreeClosest(List<GameObject> fromWhere,  GameObject center){
+        float[,] res = new float[3,2];
+        List<GameObject> temp = new List<GameObject>();
+        float maxVal = float.MaxValue;
+        float nearestDistance = maxVal;
+        GameObject tempNear = null;
+        foreach(var item in fromWhere){
+            if(Vector3.Distance(center.transform.position, item.transform.position)<nearestDistance){
+                tempNear = item;
+                nearestDistance = Vector3.Distance(center.transform.position, item.transform.position);
+            }
+        }
+        temp.Add(tempNear);
+        foreach(var item in fromWhere){
+            if(item != temp[0]){
+                if(Vector3.Distance(center.transform.position, item.transform.position)<nearestDistance){
+                    tempNear = item;
+                    nearestDistance = Vector3.Distance(center.transform.position, item.transform.position);
+                }
+            }
+        }
+        temp.Add(tempNear);
+        foreach(var item in fromWhere){
+            if((item != temp[0])&(item != temp[1])){
+                if(Vector3.Distance(center.transform.position, item.transform.position)<nearestDistance){
+                    tempNear = item;
+                    nearestDistance = Vector3.Distance(center.transform.position, item.transform.position);
+                }
+            }
+        }
+        for (int i = 0; i<3; i++){
+        res[i, 0] = (temp[0].transform.position.x - center.transform.position.x);
+        res[i, 1]  = (temp[0].transform.position.y - center.transform.position.y);
+        //res[0] = new float[2] {tempNear[0].transfor.transform.position.x -center.transform.position.x, tempNear[0].transfor.transform.position.y -center.transform.position.y};
+        }
+        return res;
+    }
     private Vector2 RandomVector2Gen()
     {
         float randX = Random.Range(-borderX, borderX);
