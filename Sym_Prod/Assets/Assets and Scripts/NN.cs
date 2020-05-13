@@ -55,15 +55,19 @@ public class NN
             }
         }
         for(int i = 0; i<2; i++){
+            /*
             if (mathModule.floatMod(input[i] * modifier[i] + input[i +2] * modifier[i +2])<0.07){
                 return new float[2];
-            }
+            }*/
             intermediet[i] = mathModule.floatCompareByMod(input[i] * modifier[i],input[i +2] * modifier[i +2]);
-            //input[i] * modifier[i] + input[i +2] * modifier[i +2];
+            /*
+            input[i] * modifier[i] + input[i +2] * modifier[i +2];
             if (mathModule.floatMod(input[i + 4] * modifier[i + 4] + input[i +6] * modifier[i +6])<0.07){
                 return new float[2];
             }
-            intermediet[i + 2] = mathModule.floatCompareByMod(input[i + 4] * modifier[i + 4],input[i +6] * modifier[i +6]);
+            */
+            //intermediet[i + 2] = mathModule.floatCompareByMod(input[i + 4] * modifier[i + 4],input[i +6] * modifier[i +6]);
+            intermediet[i + 2] = input[i + 4] * modifier[i + 4];
             //input[i + 4] * modifier[i + 4] + input[i +6] * modifier[i +6];
             gxgy[i] = mathModule.floatCompareByMod(intermediet[i] * modifier[8 +i] , intermediet[i + 2]* modifier[8 +i + 2]);
             //intermediet[i] * modifier[8 +i] + intermediet[i + 2]* modifier[8 +i + 2];

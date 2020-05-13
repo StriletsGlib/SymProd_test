@@ -8,7 +8,7 @@ public class Peacefull_Cell : Cell
     {
         //network.GenNN();
         if (state == "generated") {GenCell();}
-        hunger = (int)(((sight + jump_leanght)/10+ gene_stability/25)*hunger_modifier);
+        hunger = (int)(((sight + jump_leanght)+ gene_stability/25)*hunger_modifier);
     }
     ~Peacefull_Cell(){
         //Game_World world;
@@ -26,7 +26,7 @@ public class Peacefull_Cell : Cell
         world.pCells.Remove(gameObject);
     }
     override public void pregenNN(){
-        float[] a = new float[] {0f, 0f, 0.4f, 0.4f, -0.01f, -0.01f, -0.85f, -0.85f, 1f, 1f, 1f, 1f};
+        float[] a = new float[] {0f, 0f, 0.1f, 0.1f, 0f, 0f, -0.9f, -0.9f, 1f, 1f, 1f, 1f};
         network = new NN(a);
         network.state = " preset ";
     }

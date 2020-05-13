@@ -286,14 +286,15 @@ public class Game_World : MonoBehaviour
                  //Debug.Log("to Food = " + nearestDistance * 10000);
             }
         }
-        nearestDistance = MaxDistance;
+        /*nearestDistance = MaxDistance;
         foreach(var border in borders){
-            if(Vector3.Distance(watcher.transform.position, border.transform.position)<nearestDistance){
+            if(Vector3.Distance(watcher.transform.position, border.transform.position)<nearestDistance)){
                 coord[6] = (border.transform.position.x - watcher.transform.position.x)/MaxDistance;
                 coord[7] = (border.transform.position.y - watcher.transform.position.y)/MaxDistance;
                 nearestDistance =Vector3.Distance(watcher.transform.position, border.transform.position);
             }
         }
+        */
         return coord;
     }
 }
