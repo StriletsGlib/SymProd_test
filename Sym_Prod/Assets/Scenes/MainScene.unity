@@ -547,5 +547,11 @@ PrefabInstance:
       propertyPath: doBordersKill
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
+        type: 3}
+      propertyPath: cellBodyAlgP
+      value: 
+      objectReference: {fileID: 4645622539692510738, guid: 44648ef74c48b412eb9d5dab5c55ca70,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2156bd1f01a9449fa8101009ce04b1e8, type: 3}

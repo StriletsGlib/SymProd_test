@@ -5,7 +5,7 @@ using UnityEngine;
 public class ImportantData : MonoBehaviour
 {
     public int gameSpeed = 1;
-    public int chanceOfPreset = 50;
+    public int chanceOfPreset = 50, chanceOfNNCell = 50;
     public string WhereToStoreCells = "Stored.Cells.txt";
     public bool ShouldStoreCellsInFile = false;
     public float borderX = 30, borderY=15;

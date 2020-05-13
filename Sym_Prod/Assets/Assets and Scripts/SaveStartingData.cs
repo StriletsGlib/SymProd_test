@@ -22,6 +22,7 @@ public class SaveStartingData : MonoBehaviour
         GameObject SpeedSource = GameObject.Find("InputGameSpeed");
         GameObject FoodSource = GameObject.Find("InputFoodSpawnRate");
         GameObject PresetChance = GameObject.Find("InputPresetChance");
+        GameObject UseNNChance = GameObject.Find("InputNNChance");
         GameObject DoRestart = GameObject.Find("DoRestart");
         GameObject DBK = GameObject.Find("DoBordersKill");
         ImportantData startData = GameObject.Find("Start_Data").GetComponent<ImportantData>();
@@ -32,6 +33,8 @@ public class SaveStartingData : MonoBehaviour
         startData.restartWhenDead = DoRestart.GetComponent<Toggle>().isOn;
         startData.gameSpeed=tryToTransform(SpeedSource.GetComponent<InputField>().text,startData.gameSpeed);
         startData.foodSpawnRate=tryToTransform(FoodSource.GetComponent<InputField>().text,startData.foodSpawnRate);
+        
+        startData.chanceOfNNCell=tryToTransform(UseNNChance.GetComponent<InputField>().text,startData.chanceOfNNCell);
         
         startData.chanceOfPreset=tryToTransform(PresetChance.GetComponent<InputField>().text,startData.chanceOfPreset);
         

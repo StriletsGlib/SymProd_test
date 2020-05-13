@@ -17,4 +17,11 @@ public class ListAnaliser
         }
         return res;
     }
+    public void clearFromNull<T>(List<T> cleared){
+        foreach(var inList in cleared){
+            if(inList == null){
+                cleared.Remove(inList);
+            }
+        }
+    }
 }

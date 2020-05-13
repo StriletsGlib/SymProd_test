@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e72f79f12c6d495ba93dbd869ad3faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  presetNNChance: 0
+  gameSpeed: 1
   sight: 0
   jump_leanght: 0
   food_min: 400
@@ -105,7 +107,7 @@ MonoBehaviour:
   energy_max: 0
   gene_stability: 0
   hunger: 0
-  minimum_energy_divided: 12000
+  minimum_energy_divided: 4000
   divisionBody: {fileID: 7743315368189013050}
   state: generated
   hunger_modifier: 1

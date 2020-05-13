@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using System;
 using System.IO;
 
 public class Game_World : MonoBehaviour
 {
+    RandomChancePercentage randomChancePercentage = new RandomChancePercentage();
     public int gameSpeed = 1;
-    public int chanceOfPreset = 50;
+    public int chanceOfPreset = 50, chanceOfNNCell = 50;
     ListAnaliser list_analysis = new ListAnaliser();
     public string WhereToStoreCells = "Stored.Cells.txt";
     public bool ShouldStoreCellsInFile = false;
@@ -18,7 +18,7 @@ public class Game_World : MonoBehaviour
     public List<GameObject> foods = new List<GameObject>();
     public List<CellInfo> bestPCells = new List<CellInfo>();
     public List<CellInfo> bestACells = new List<CellInfo>();
-    public GameObject foodBody, cellBodyP, cellBodyA, border_Body;
+    public GameObject foodBody, cellBodyP, cellBodyA, border_Body, cellBodyAlgP;
     public int cellPSpawn = 12, cellASpawn = 5;
     public int saveBestNum = 3;
     public int savedCells = 0;
@@ -33,7 +33,7 @@ public class Game_World : MonoBehaviour
     bool needToSaveP = true;
     bool needToSave = true;
     bool started = false;
-    float[,] findThreeClosest(List<GameObject> fromWhere,  GameObject center){
+    public float[,] findThreeClosest(List<GameObject> fromWhere,  GameObject center){
         float[,] res = new float[3,2];
         List<GameObject> temp = new List<GameObject>();
         float maxVal = float.MaxValue;
@@ -104,6 +104,7 @@ public class Game_World : MonoBehaviour
         xrad = sourceOfData.xrad;
         chanceOfPreset = sourceOfData.chanceOfPreset;
         doBordersKill =sourceOfData.doBordersKill;
+        chanceOfNNCell =sourceOfData.chanceOfNNCell;
         //cellPSpawn = sourceOfData.intData[0];
         //cellASpawn = sourceOfData.intData[1];
         //saveBestNum =sourceOfData.intData[2];
@@ -176,7 +177,12 @@ public class Game_World : MonoBehaviour
     }
     void SpawnBasicSells(){
         for(int i = 0; i< cellPSpawn; i++){
-            pCells.Add(Instantiate(cellBodyP,RandomVector2Gen(), Quaternion.identity));
+            if(randomChancePercentage.More(chanceOfNNCell)){
+                pCells.Add(Instantiate(cellBodyP,RandomVector2Gen(), Quaternion.identity));
+            }
+            else{
+                pCells.Add(Instantiate(cellBodyAlgP,RandomVector2Gen(), Quaternion.identity));
+            }
             pCells[i].GetComponent<Cell>().gameSpeed = gameSpeed;
             pCells[i].GetComponent<Cell>().presetNNChance= chanceOfPreset;
             pCells[i].GetComponent<Cell>().state="generated";
@@ -246,19 +252,36 @@ public class Game_World : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        list_analysis.clearFromNull<GameObject>(pCells);
+        list_analysis.clearFromNull<GameObject>(aCells);
         SavingIfNeeded();
         if(ShouldGameRestart()){
             GameRestart();
         }
         RateSpawn();
     }
+    public float[] findClosest(GameObject watcher, List<GameObject> fromWhere, float MaxDistance){
+        float[] coord = new float[2];
+        float nearestDistance = MaxDistance;
+        foreach(var thing in fromWhere){
+            if((thing !=watcher)&(thing != null)){
+                if(Vector3.Distance(watcher.transform.position, thing.transform.position)<nearestDistance){
+                    coord[0] = (thing.transform.position.x - watcher.transform.position.x)/MaxDistance;
+                    coord[1] = (thing.transform.position.y - watcher.transform.position.y)/MaxDistance;
+                    nearestDistance =Vector3.Distance(watcher.transform.position, thing.transform.position);
+                }
+            }
+        }
+        return coord;
+    }
     public float[] Searching(GameObject watcher, float MaxDistance){
         //GameObject nearestP, nearestA, nearestF;
         float[] coord = new float[8];
-        //Debug.Log(coord[0] + coord[1] + coord[2]+ coord[3]+ coord[4]+ coord[5]+ coord[6]+ coord[7]);
+        //System.Array.Copy(findClosest(watcher, pCells, MaxDistance), 0, coord, 0, 2);
+        //System.Array.Copy(findClosest(watcher, aCells, MaxDistance), 0, coord, 4, 2);
         float nearestDistance = MaxDistance;
         foreach(var pCell in pCells){
-            if(pCell !=watcher){
+            if((pCell !=watcher)&(pCell !=null)){
                 if(Vector3.Distance(watcher.transform.position, pCell.transform.position)<nearestDistance){
                     coord[0] = (pCell.transform.position.x - watcher.transform.position.x)/MaxDistance;
                     coord[1] = (pCell.transform.position.y - watcher.transform.position.y)/MaxDistance;
@@ -268,7 +291,7 @@ public class Game_World : MonoBehaviour
         }
         nearestDistance = MaxDistance;
         foreach(var aCell in aCells){
-            if(aCell !=watcher){
+            if((aCell !=watcher)&(aCell !=null)){
                 if(Vector3.Distance(watcher.transform.position, aCell.transform.position)<nearestDistance){
                     coord[4] = (aCell.transform.position.x - watcher.transform.position.x)/MaxDistance;
                     coord[5] = (aCell.transform.position.y - watcher.transform.position.y)/MaxDistance;
@@ -279,7 +302,7 @@ public class Game_World : MonoBehaviour
         }
         nearestDistance = MaxDistance;
         foreach(var food in foods){
-            if(Vector3.Distance(watcher.transform.position, food.transform.position)<nearestDistance){
+            if((Vector3.Distance(watcher.transform.position, food.transform.position)<nearestDistance)&(food !=null)){
                 float fdx, fdy;
                 MyMathModule myMathModule = new MyMathModule();
                 fdx = (food.transform.position.x - watcher.transform.position.x)/MaxDistance;

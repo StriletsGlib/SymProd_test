@@ -9,7 +9,7 @@ public abstract class Cell : MonoBehaviour
     public float sight, jump_leanght;
     public int food_min=400, food_max=1000;
     public int energy_divided = 999999, energy_count = -1, energy_max = 999999, gene_stability = 999999, hunger = 999999;
-    public int minimum_energy_divided = 12000;
+    public int minimum_energy_divided = 2500;
     public GameObject divisionBody;
     public string state = "generated";
     public float hunger_modifier = 1;
@@ -24,14 +24,17 @@ public abstract class Cell : MonoBehaviour
         energy_count = 50000;
         energy_max = 1000000;
         gene_stability = Random.Range(10, 50);
-        state = "gen";
+        divState();
         network = new NN();
         network.GenNN();
         if (RandomChance(presetNNChance)){
             pregenNN();
             state = "improvedAI?";
         }
-        hunger = (int)(((sight + jump_leanght) + gene_stability/25)*hunger_modifier);
+        hunger = (int)(((jump_leanght)/10 + gene_stability/25)*hunger_modifier);
+    }
+    public virtual void divState(){
+        state = "gen";
     }
     public virtual void pregenNN(){
         Debug.Log("hey hey, people!");
@@ -78,7 +81,7 @@ public abstract class Cell : MonoBehaviour
     {
         if (state == "generated") {GenCell();}
         hunger = (int)(((sight + jump_leanght) + gene_stability/25)*hunger_modifier);
-        Debug.Log("xd");
+        //Debug.Log("xd");
     }
     public void RegenerateEnergy(){
         //energy_count = Random.Range(50000, 75000);
@@ -137,8 +140,7 @@ public abstract class Cell : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public void ThinkAndMove(){
+    virtual public Vector2 thinkDirection(){
         float[] k = new float[8];
         Game_World world;
         world = GameObject.Find("GameWorld_1").GetComponent<Game_World>();
@@ -146,11 +148,14 @@ public abstract class Cell : MonoBehaviour
         float[] res = network.think(k);
         Vector2 movement_vector = new Vector2(res[0], res[1]);
         //Debug.Log("resx = " + res[0]*100 + "resy = " + res[1]);
-        movement_vector.Normalize();
         //Debug.Log("resx1 = " + movement_vector.x + "resy1 = " + movement_vector.y);
         MyMathModule mod = new MyMathModule();
         movement_vector.Normalize();
         movement_vector = movement_vector * 10;
+        return movement_vector;
+    }
+    virtual public void ThinkAndMove(){
+        Vector2 movement_vector = thinkDirection();
         Vector2 place = new Vector2(movement_vector.x + transform.position.x, movement_vector.y +transform.position.y);
         float angle = Vector2.SignedAngle(prev_Move, movement_vector);
         transform.position = Vector2.MoveTowards(transform.position, place, jump_leanght* Time.deltaTime * gameSpeed);
