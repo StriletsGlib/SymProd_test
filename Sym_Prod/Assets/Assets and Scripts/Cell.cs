@@ -19,7 +19,7 @@ public abstract class Cell : MonoBehaviour
     {
         sight = (float)Random.Range(900, 1200) / 100;
         jump_leanght = (float)Random.Range(100, 300) / 100;
-        energy_divided = Random.Range(5000, 10000);
+        energy_divided = Random.Range(10000, 25000);
         //energy_count = Random.Range(50000, 75000);
         energy_count = 50000;
         energy_max = 1000000;

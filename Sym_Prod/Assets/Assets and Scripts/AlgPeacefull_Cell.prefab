@@ -59,7 +59,7 @@ MonoBehaviour:
   energy_max: 999999
   gene_stability: 999999
   hunger: 999999
-  minimum_energy_divided: 4000
+  minimum_energy_divided: 10000
   divisionBody: {fileID: 4645622539692510738}
   state: generated
   hunger_modifier: 1

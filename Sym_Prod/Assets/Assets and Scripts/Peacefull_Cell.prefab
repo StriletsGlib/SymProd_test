@@ -155,7 +155,7 @@ MonoBehaviour:
   energy_max: 0
   gene_stability: 0
   hunger: 0
-  minimum_energy_divided: 4000
+  minimum_energy_divided: 10000
   divisionBody: {fileID: 6093689470693125441}
   state: generated
   hunger_modifier: 0.5
