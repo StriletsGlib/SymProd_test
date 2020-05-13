@@ -253,7 +253,7 @@ MonoBehaviour:
   ShouldStoreCellsInFile: 0
   borderX: 30
   borderY: 15
-  cellPSpawn: 12
+  cellPSpawn: 17
   cellASpawn: 5
   saveBestNum: 10
   foodSpawnRate: 0.025

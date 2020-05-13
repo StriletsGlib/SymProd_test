@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NN
 {
+    
+    MyMathModule mathModule = new MyMathModule();
     public string state = " first random ";
     RandomChancePercentage rand = new RandomChancePercentage();
     public float[] modifier = new float[12];
@@ -46,12 +48,19 @@ public class NN
     }
     public float[] think(float[] input){
         float[] intermediet = new float[4];
-        //string seing =(" xp "+input[0].ToString("0.00") + " yp "+ input[1].ToString("0.00") +" xf "+input[2].ToString("0.00") +" yf  "+input[3].ToString("0.00")+" xa "+input[4].ToString("0.00") +" ya  " + input[5].ToString("0.00")+" xv "+input[6].ToString("0.00") +" yv "+input[7].ToString("0.00"));
-        //Debug.Log(seing);
+        for(int i = 1; i<8; i++){
+            if (input[i]==0){}
+            else {
+                input[i] = mathModule.floatSigma(input[i]) * (1 - mathModule.floatMod(input[i]));
+            }
+        }
         for(int i = 0; i<2; i++){
-            intermediet[i] = input[i] * modifier[i] + input[i +2] * modifier[i +2];
-            intermediet[i + 2] = input[i + 4] * modifier[i + 4] + input[i +6] * modifier[i +6];
-            gxgy[i] = intermediet[i] * modifier[8 +i] + intermediet[i + 2]* modifier[8 +i + 2];
+            intermediet[i] = mathModule.floatCompareByMod(input[i] * modifier[i],input[i +2] * modifier[i +2]);
+            //input[i] * modifier[i] + input[i +2] * modifier[i +2];
+            intermediet[i + 2] = mathModule.floatCompareByMod(input[i + 4] * modifier[i + 4],input[i +6] * modifier[i +6]);
+            //input[i + 4] * modifier[i + 4] + input[i +6] * modifier[i +6];
+            gxgy[i] = mathModule.floatCompareByMod(intermediet[i] * modifier[8 +i] , intermediet[i + 2]* modifier[8 +i + 2]);
+            //intermediet[i] * modifier[8 +i] + intermediet[i + 2]* modifier[8 +i + 2];
         }
         return gxgy;
     }

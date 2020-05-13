@@ -9,6 +9,7 @@ TagManager:
   - Attacking_Cell
   - Black_Hole
   - Game_World
+  - Border
   layers:
   - Default
   - TransparentFX

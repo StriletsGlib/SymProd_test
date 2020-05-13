@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Black_Hole : MonoBehaviour
 {
+    bool shouldDestoryCells = true;
     // Start is called before the first frame update
     void Start()
     {
-        
+        shouldDestoryCells = gameObject.GetComponent<BoxCollider2D>().isTrigger;
     }
 
     // Update is called once per frame
@@ -16,7 +17,7 @@ public class Black_Hole : MonoBehaviour
         
     }
     private void OnTriggerEnter2D(Collider2D collision){
-        if ((collision.gameObject.CompareTag("Attacking_Cell")) || (collision.gameObject.CompareTag("Peacefull_Cell"))){
+        if (shouldDestoryCells&((collision.gameObject.CompareTag("Attacking_Cell")) || (collision.gameObject.CompareTag("Peacefull_Cell")))){
             collision.GetComponent<Cell>().ClearFromWorld();
             Destroy(collision.gameObject);
         }

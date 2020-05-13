@@ -17,7 +17,7 @@ public class Attacking_Cell : Cell
     }
     override public void EatFood(int energy_eaten_cell){
         //Debug.Log("eating a cell");
-        energy_count= energy_count + Random.Range(food_min, food_max) + energy_eaten_cell;
+        energy_count= energy_count + Random.Range(food_min, food_max) + energy_eaten_cell/10;
         if (energy_count>energy_max) {energy_count = energy_max;}
     }
     override public void sendToList(GameObject what){
@@ -31,7 +31,7 @@ public class Attacking_Cell : Cell
         world.aCells.Remove(gameObject);
     }
     override public void pregenNN(){
-        float[] a = new float[] {0.7f, 0.7f, 0f, 0f, 0f, 0f, -0.9f, -0.9f, 0.5f, 0.5f, 0.5f, 0.5f};
+        float[] a = new float[] {0.7f, 0.7f, 0f, 0f, 0f, 0f, -0.1f, -0.1f, 1f, 1f, 1f, 1f};
         network = new NN(a);
         network.state = " preset ";
     }

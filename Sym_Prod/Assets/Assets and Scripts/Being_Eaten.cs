@@ -9,8 +9,8 @@ public class Being_Eaten : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log("Deus");
-        if (collision.gameObject.CompareTag(whatTag))
-        {
+        if (collision.gameObject.CompareTag(whatTag)){
+            //Debug.Log(collision.gameObject.tag);
             //Debug.Log("Vault");
             if (itIsACell){
                 Cell consumer = collision.GetComponent<Cell>();

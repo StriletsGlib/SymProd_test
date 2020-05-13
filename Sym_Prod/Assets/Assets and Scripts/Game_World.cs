@@ -28,7 +28,7 @@ public class Game_World : MonoBehaviour
     public float cellASpawnRate = 999999, cellPSpawnRate = 999999;
     public bool spawnCells = false;
     public bool restartWhenDead = false;
-    bool doBordersKill = true;
+    public bool doBordersKill = true;
     bool needToSaveA = true;
     bool needToSaveP = true;
     bool needToSave = true;
@@ -79,9 +79,8 @@ public class Game_World : MonoBehaviour
             place[2] = new Vector2(-dx, yrad-1);
             place[3] = new Vector2(-dx, -yrad+1);
             for(int i = 0; i<4; i++){
-                GameObject border =Instantiate(border_Body,place[i], Quaternion.identity);
-                border.GetComponent<BoxCollider2D>().isTrigger =doBordersKill;
-                borders.Add(Instantiate(border_Body,place[i], Quaternion.identity));}
+                borders.Add(Instantiate(border_Body,place[i], Quaternion.identity));
+            }
         }
         for(int dy = 0; dy<yrad; dy++){
             Vector2[] place = new Vector2[4];
@@ -90,9 +89,11 @@ public class Game_World : MonoBehaviour
             place[2] = new Vector2(xrad,-dy);
             place[3] = new Vector2(-xrad,-dy);
             for(int i = 0; i<4; i++){
-                GameObject border =Instantiate(border_Body,place[i], Quaternion.identity);
-                border.GetComponent<BoxCollider2D>().isTrigger =doBordersKill;
-                borders.Add(Instantiate(border_Body,place[i], Quaternion.identity));}
+                borders.Add(Instantiate(border_Body,place[i], Quaternion.identity));
+            }
+        }
+        foreach(var borderBlock in borders){
+            borderBlock.GetComponent<BoxCollider2D>().isTrigger = doBordersKill;
         }
         SpawnBasicSells();
         started = true;
@@ -136,11 +137,13 @@ public class Game_World : MonoBehaviour
             pCells.Add(Instantiate(cellBodyP,RandomVector2Gen(), Quaternion.identity));
             pCells[i].GetComponent<Cell>().gameSpeed = gameSpeed;
             pCells[i].GetComponent<Cell>().presetNNChance= chanceOfPreset;
+            pCells[i].GetComponent<Cell>().state="generated";
         }
         for(int i = 0; i< cellASpawn; i++){
             aCells.Add(Instantiate(cellBodyA,RandomVector2Gen(), Quaternion.identity));
             aCells[i].GetComponent<Cell>().gameSpeed = gameSpeed;
             aCells[i].GetComponent<Cell>().presetNNChance= chanceOfPreset;
+            aCells[i].GetComponent<Cell>().state="generated";
         }
     }
     bool ShouldGameRestart(){
@@ -210,12 +213,13 @@ public class Game_World : MonoBehaviour
     public float[] Searching(GameObject watcher, float MaxDistance){
         //GameObject nearestP, nearestA, nearestF;
         float[] coord = new float[8];
+        //Debug.Log(coord[0] + coord[1] + coord[2]+ coord[3]+ coord[4]+ coord[5]+ coord[6]+ coord[7]);
         float nearestDistance = MaxDistance;
         foreach(var pCell in pCells){
             if(pCell !=watcher){
                 if(Vector3.Distance(watcher.transform.position, pCell.transform.position)<nearestDistance){
-                    coord[0] = pCell.transform.position.x - watcher.transform.position.x;
-                    coord[1] = pCell.transform.position.y - watcher.transform.position.y;
+                    coord[0] = (pCell.transform.position.x - watcher.transform.position.x)/MaxDistance;
+                    coord[1] = (pCell.transform.position.y - watcher.transform.position.y)/MaxDistance;
                     nearestDistance =Vector3.Distance(watcher.transform.position, pCell.transform.position);
                 }
             }
@@ -224,26 +228,27 @@ public class Game_World : MonoBehaviour
         foreach(var aCell in aCells){
             if(aCell !=watcher){
                 if(Vector3.Distance(watcher.transform.position, aCell.transform.position)<nearestDistance){
-                    coord[4] = aCell.transform.position.x - watcher.transform.position.x;
-                    coord[5] = aCell.transform.position.y - watcher.transform.position.y;
+                    coord[4] = (aCell.transform.position.x - watcher.transform.position.x)/MaxDistance;
+                    coord[5] = (aCell.transform.position.y - watcher.transform.position.y)/MaxDistance;
                     nearestDistance =Vector3.Distance(watcher.transform.position, aCell.transform.position);
+                    //Debug.Log("to Attack = " + nearestDistance * 10000);
                 }
-                
             }
         }
         nearestDistance = MaxDistance;
         foreach(var food in foods){
             if(Vector3.Distance(watcher.transform.position, food.transform.position)<nearestDistance){
-                coord[2] = food.transform.position.x - watcher.transform.position.x;
-                coord[3] = food.transform.position.y - watcher.transform.position.y;
+                coord[2] = (food.transform.position.x - watcher.transform.position.x)/MaxDistance;
+                coord[3] = (food.transform.position.y - watcher.transform.position.y)/MaxDistance;
                 nearestDistance =Vector3.Distance(watcher.transform.position, food.transform.position);
+                 //Debug.Log("to Food = " + nearestDistance * 10000);
             }
         }
         nearestDistance = MaxDistance;
         foreach(var border in borders){
             if(Vector3.Distance(watcher.transform.position, border.transform.position)<nearestDistance){
-                coord[6] = border.transform.position.x - watcher.transform.position.x;
-                coord[7] = border.transform.position.y - watcher.transform.position.y;
+                coord[6] = (border.transform.position.x - watcher.transform.position.x)/MaxDistance;
+                coord[7] = (border.transform.position.y - watcher.transform.position.y)/MaxDistance;
                 nearestDistance =Vector3.Distance(watcher.transform.position, border.transform.position);
             }
         }

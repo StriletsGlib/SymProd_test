@@ -542,5 +542,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8698007405910006080, guid: 88063cbdd58f1413284bc5bb22bc0059,
         type: 3}
+    - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
+        type: 3}
+      propertyPath: doBordersKill
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2156bd1f01a9449fa8101009ce04b1e8, type: 3}
