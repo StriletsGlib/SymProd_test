@@ -25,4 +25,9 @@ public class Peacefull_Cell : Cell
         world = GameObject.Find("GameWorld_1").GetComponent<Game_World>();
         world.pCells.Remove(gameObject);
     }
+    override public void pregenNN(){
+        float[] a = new float[] {0f, 0f, 0.5f, 0.5f, -0.9f, -0.9f, -0.7f, -0.7f, 0.5f, 0.5f, 0.5f, 0.5f};
+        network = new NN(a);
+        network.state = " preset ";
+    }
 }

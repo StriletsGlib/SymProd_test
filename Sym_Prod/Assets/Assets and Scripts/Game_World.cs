@@ -7,6 +7,7 @@ using System.IO;
 public class Game_World : MonoBehaviour
 {
     public int gameSpeed = 1;
+    public int chanceOfPreset = 50;
     ListAnaliser list_analysis = new ListAnaliser();
     public string WhereToStoreCells = "Stored.Cells.txt";
     public bool ShouldStoreCellsInFile = false;
@@ -42,10 +43,29 @@ public class Game_World : MonoBehaviour
     }
     void getImportantInfo(){
         ImportantData sourceOfData = GameObject.Find("Start_Data").GetComponent<ImportantData>();
-        cellPSpawn = sourceOfData.intData[0];
-        cellASpawn = sourceOfData.intData[1];
-        saveBestNum =sourceOfData.intData[2];
-        doBordersKill =sourceOfData.boolData[0];
+        gameSpeed = sourceOfData.gameSpeed;
+        WhereToStoreCells = sourceOfData.WhereToStoreCells;
+        ShouldStoreCellsInFile = sourceOfData.ShouldStoreCellsInFile;
+        borderX = sourceOfData.borderX;
+        borderY = sourceOfData.borderY;
+        cellPSpawn = sourceOfData.cellPSpawn;
+        cellASpawn = sourceOfData.cellASpawn;
+        saveBestNum = sourceOfData.saveBestNum;
+        foodSpawnRate = sourceOfData.foodSpawnRate;
+        xrad = sourceOfData.xrad;
+        yrad = sourceOfData.yrad;
+        cellASpawnRate = sourceOfData.cellASpawnRate;
+        cellPSpawnRate = sourceOfData.cellPSpawnRate;
+        spawnCells = sourceOfData.spawnCells;
+        restartWhenDead = sourceOfData.restartWhenDead;
+        xrad = sourceOfData.xrad;
+        xrad = sourceOfData.xrad;
+        chanceOfPreset = sourceOfData.chanceOfPreset;
+        doBordersKill =sourceOfData.doBordersKill;
+        //cellPSpawn = sourceOfData.intData[0];
+        //cellASpawn = sourceOfData.intData[1];
+        //saveBestNum =sourceOfData.intData[2];
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -115,10 +135,12 @@ public class Game_World : MonoBehaviour
         for(int i = 0; i< cellPSpawn; i++){
             pCells.Add(Instantiate(cellBodyP,RandomVector2Gen(), Quaternion.identity));
             pCells[i].GetComponent<Cell>().gameSpeed = gameSpeed;
+            pCells[i].GetComponent<Cell>().presetNNChance= chanceOfPreset;
         }
         for(int i = 0; i< cellASpawn; i++){
             aCells.Add(Instantiate(cellBodyA,RandomVector2Gen(), Quaternion.identity));
             aCells[i].GetComponent<Cell>().gameSpeed = gameSpeed;
+            aCells[i].GetComponent<Cell>().presetNNChance= chanceOfPreset;
         }
     }
     bool ShouldGameRestart(){
@@ -192,8 +214,8 @@ public class Game_World : MonoBehaviour
         foreach(var pCell in pCells){
             if(pCell !=watcher){
                 if(Vector3.Distance(watcher.transform.position, pCell.transform.position)<nearestDistance){
-                    coord[0] = watcher.transform.position.x - pCell.transform.position.x;
-                    coord[1] = watcher.transform.position.y - pCell.transform.position.y;
+                    coord[0] = pCell.transform.position.x - watcher.transform.position.x;
+                    coord[1] = pCell.transform.position.y - watcher.transform.position.y;
                     nearestDistance =Vector3.Distance(watcher.transform.position, pCell.transform.position);
                 }
             }
@@ -202,8 +224,8 @@ public class Game_World : MonoBehaviour
         foreach(var aCell in aCells){
             if(aCell !=watcher){
                 if(Vector3.Distance(watcher.transform.position, aCell.transform.position)<nearestDistance){
-                    coord[4] = watcher.transform.position.x - aCell.transform.position.x;
-                    coord[5] = watcher.transform.position.y - aCell.transform.position.y;
+                    coord[4] = aCell.transform.position.x - watcher.transform.position.x;
+                    coord[5] = aCell.transform.position.y - watcher.transform.position.y;
                     nearestDistance =Vector3.Distance(watcher.transform.position, aCell.transform.position);
                 }
                 
@@ -212,16 +234,16 @@ public class Game_World : MonoBehaviour
         nearestDistance = MaxDistance;
         foreach(var food in foods){
             if(Vector3.Distance(watcher.transform.position, food.transform.position)<nearestDistance){
-                coord[2] = watcher.transform.position.x - food.transform.position.x;
-                coord[3] = watcher.transform.position.y - food.transform.position.y;
+                coord[2] = food.transform.position.x - watcher.transform.position.x;
+                coord[3] = food.transform.position.y - watcher.transform.position.y;
                 nearestDistance =Vector3.Distance(watcher.transform.position, food.transform.position);
             }
         }
         nearestDistance = MaxDistance;
         foreach(var border in borders){
             if(Vector3.Distance(watcher.transform.position, border.transform.position)<nearestDistance){
-                coord[6] = watcher.transform.position.x - border.transform.position.x;
-                coord[7] = watcher.transform.position.y - border.transform.position.y;
+                coord[6] = border.transform.position.x - watcher.transform.position.x;
+                coord[7] = border.transform.position.y - watcher.transform.position.y;
                 nearestDistance =Vector3.Distance(watcher.transform.position, border.transform.position);
             }
         }

@@ -4,30 +4,22 @@ using UnityEngine;
 
 public class ImportantData : MonoBehaviour
 {
-    int amountOfIntData = 3;
-    public List<int> intData = new List<int>();
-    int amountOfBoolData = 1;
-    public List<bool> boolData = new List<bool>();
-    public int getPCellSpawn(){
-        return intData[0];
-    }
-    public int getACellSpawn(){
-        return intData[1];
-    }
-    public int getCellSave(){
-        return intData[2];
-    }
+    public int gameSpeed = 1;
+    public int chanceOfPreset = 50;
+    public string WhereToStoreCells = "Stored.Cells.txt";
+    public bool ShouldStoreCellsInFile = false;
+    public float borderX = 30, borderY=15;
+    public int cellPSpawn = 12, cellASpawn = 5;
+    public int saveBestNum = 10;
+    public float foodSpawnRate = 0.025f;
+    public int xrad=32, yrad=18;
+    public float cellASpawnRate = 10, cellPSpawnRate = 10;
+    public bool spawnCells = false;
+    public bool restartWhenDead = true;
+    public bool doBordersKill = false;
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i<amountOfBoolData; i++){
-            boolData.Add(false);
-        }
-        for(int i = 0; i<amountOfIntData; i++){
-            intData.Add(0);
-        }
-        DontDestroyOnLoad (gameObject);
+        GameObject.DontDestroyOnLoad(gameObject);
     }
-
-    // Update is called once per frame
 }

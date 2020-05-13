@@ -448,17 +448,17 @@ PrefabInstance:
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
       propertyPath: cellASpawn
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
       propertyPath: cellPSpawn
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
       propertyPath: foodSpawnRate
-      value: 0.015
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
@@ -473,7 +473,7 @@ PrefabInstance:
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
       propertyPath: restartWhenDead
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
@@ -514,7 +514,7 @@ PrefabInstance:
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
       propertyPath: ShouldStoreCellsInFile
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
         type: 3}
@@ -536,5 +536,11 @@ PrefabInstance:
       propertyPath: gameSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1398857409884189326, guid: 2156bd1f01a9449fa8101009ce04b1e8,
+        type: 3}
+      propertyPath: foodBody
+      value: 
+      objectReference: {fileID: 8698007405910006080, guid: 88063cbdd58f1413284bc5bb22bc0059,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2156bd1f01a9449fa8101009ce04b1e8, type: 3}

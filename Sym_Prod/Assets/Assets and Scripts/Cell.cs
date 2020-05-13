@@ -4,6 +4,7 @@ using UnityEngine;
 public abstract class Cell : MonoBehaviour
 {
     //int number = 0;
+    public int presetNNChance = 0;
     public int gameSpeed = 1;
     public float sight, jump_leanght;
     public int food_min=400, food_max=1000;
@@ -26,7 +27,13 @@ public abstract class Cell : MonoBehaviour
         state = "gen";
         network = new NN();
         network.GenNN();
+        if (RandomChance(100 - presetNNChance)){
+            pregenNN();
+        }
         hunger = (int)(((sight + jump_leanght) + gene_stability/25)*hunger_modifier);
+    }
+    public virtual void pregenNN(){
+        Debug.Log("hey hey, people!");
     }
     public void CellInfoGet(CellInfo copied_cell){
         sight = copied_cell.sight;
@@ -45,6 +52,7 @@ public abstract class Cell : MonoBehaviour
         network = new NN(copied_cell.network);
         gameSpeed = copied_cell.gameSpeed;
     }
+    
     void Mutate(){
         if (RandomChance(gene_stability)){
             sight = sight + ((float)(Random.Range(10, 15) - Random.Range(10, 20))/ 100);
@@ -136,7 +144,7 @@ public abstract class Cell : MonoBehaviour
         float[] res = network.think(k);
         Vector2 movement_vector = new Vector2(res[0], res[1]);
         movement_vector.Normalize();
-        Vector2 place = new Vector2(res[0] + transform.position.x, res[1] +transform.position.y);
+        Vector2 place = new Vector2(movement_vector.x + transform.position.x, movement_vector.y +transform.position.y);
         float angle = Vector2.SignedAngle(prev_Move, movement_vector);
         transform.position = Vector2.MoveTowards(transform.position, place, jump_leanght* Time.deltaTime * gameSpeed);
         //Quaternion stand_in = transform.rotation;
