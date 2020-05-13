@@ -70,6 +70,11 @@ public class Game_World : MonoBehaviour
         }
         return res;
     }
+    void PanicFoodSpawn(){
+        foods.Add(Instantiate(foodBody,RandomVector2Gen(), Quaternion.identity));
+        foods.Add(Instantiate(foodBody,RandomVector2Gen(), Quaternion.identity));
+        foods.Add(Instantiate(foodBody,RandomVector2Gen(), Quaternion.identity));
+    }
     private Vector2 RandomVector2Gen()
     {
         float randX = Random.Range(-borderX, borderX);
