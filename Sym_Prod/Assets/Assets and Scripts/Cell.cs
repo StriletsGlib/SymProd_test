@@ -15,15 +15,11 @@ public abstract class Cell : MonoBehaviour
     public float hunger_modifier = 1;
     public NN network = new NN();
     Vector2 prev_Move = new Vector2(0,1);
-    Vector2 roamVector = new Vector2(0,0);
-    public bool roaming = false;
-    float periodOfRoam = 60;
-    float nextRoam = 0;
     public void GenCell()
     {
         sight = (float)Random.Range(900, 1200) / 100;
         jump_leanght = (float)Random.Range(100, 300) / 100;
-        energy_divided = Random.Range(75000, 100000);
+        energy_divided = Random.Range(5000, 10000);
         //energy_count = Random.Range(50000, 75000);
         energy_count = 50000;
         energy_max = 1000000;
@@ -141,15 +137,7 @@ public abstract class Cell : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void createRoamingVector(){
-            nextRoam = Time.time + periodOfRoam;
-            float xroam = (float)Random.Range(-100, 100)/10;
-            float yroam = (float)Random.Range(-100, 100)/10;
-            if (xroam*yroam==0){ createRoamingVector();}
-            roamVector.x = xroam;
-            roamVector.y = yroam;
-            roaming = true;
-    }
+
     public void ThinkAndMove(){
         float[] k = new float[8];
         Game_World world;
@@ -157,16 +145,11 @@ public abstract class Cell : MonoBehaviour
         k = world.Searching(gameObject, sight);
         float[] res = network.think(k);
         Vector2 movement_vector = new Vector2(res[0], res[1]);
-        if (movement_vector.magnitude <0.01) {
-            if((Time.time > nextRoam)||!roaming){
-                createRoamingVector();
-            }
-        }
-        else {roaming = false; }
         //Debug.Log("resx = " + res[0]*100 + "resy = " + res[1]);
         movement_vector.Normalize();
         //Debug.Log("resx1 = " + movement_vector.x + "resy1 = " + movement_vector.y);
         MyMathModule mod = new MyMathModule();
+        movement_vector.Normalize();
         movement_vector = movement_vector * 10;
         Vector2 place = new Vector2(movement_vector.x + transform.position.x, movement_vector.y +transform.position.y);
         float angle = Vector2.SignedAngle(prev_Move, movement_vector);

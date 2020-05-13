@@ -144,10 +144,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a018700ab234b56be3f2c908a3bee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  presetNNChance: 0
+  gameSpeed: 1
   sight: 0
   jump_leanght: 0
-  food_min: 1000
-  food_max: 1000
+  food_min: 2000
+  food_max: 2000
   energy_divided: 999999
   energy_count: 1
   energy_max: 0
