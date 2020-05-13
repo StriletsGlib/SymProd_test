@@ -62,6 +62,10 @@ public class AlgPeacefull_Cell : Cell
         float[] foodc = new float[2] {foodArr[2,0], foodArr[2,1]};
         float[] enemyA = world.findClosest(gameObject,world.pCells, float.MaxValue);
         float[] allayA = world.findClosest(gameObject,world.aCells, float.MaxValue);
+        float[] allayA1 = world.findClosest(gameObject,world.pCellsAlg, float.MaxValue);
+        if(allayA[0]*allayA[0] + allayA[1]*allayA[1] <allayA1[0]*allayA1[0] + allayA1[1]*allayA1[1]){
+            allayA = allayA1;
+        }
         float[] res = whereToGo(fooda, foodb, foodc, enemyA, allayA);
         Vector2 movement_vector = new Vector2(res[0], res[1]);
         return movement_vector;
@@ -69,7 +73,7 @@ public class AlgPeacefull_Cell : Cell
     override public void ClearFromWorld(){
         Game_World world;
         world = GameObject.Find("GameWorld_1").GetComponent<Game_World>();
-        world.pCells.Remove(gameObject);
+        world.pCellsAlg.Remove(gameObject);
     }
     override public void mutateBehaviour(){
         if (randomChancePercentage.More(gene_stability)){
@@ -81,6 +85,30 @@ public class AlgPeacefull_Cell : Cell
         if(avoidness*fearOfEnemies == 0){
             ClearFromWorld();
         }
+    }
+    override public void CellInfoGet(CellInfo copied_cell){
+        sight = copied_cell.sight;
+        jump_leanght = copied_cell.jump_leanght;
+        food_min = copied_cell.food_min;
+        food_max = copied_cell.food_max;
+        energy_divided = copied_cell.energy_divided;
+        energy_count = copied_cell.energy_count;
+        energy_max = copied_cell.energy_max;
+        gene_stability = copied_cell.gene_stability;
+        hunger = copied_cell.hunger;
+        minimum_energy_divided = copied_cell.minimum_energy_divided;
+        divisionBody = copied_cell.divisionBody;
+        state = copied_cell.state;
+        hunger_modifier = copied_cell.hunger_modifier;
+        network = new NN(copied_cell.network);
+        gameSpeed = copied_cell.gameSpeed;
+        fearOfEnemies = (double)network.modifier[0];
+        avoidness  = (double)network.modifier[1];
+    }
+    override public void sendToList(GameObject what){
+        Game_World world;
+        world = GameObject.Find("GameWorld_1").GetComponent<Game_World>();
+        world.pCellsAlg.Add(what);
     }
 }
 

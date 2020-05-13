@@ -6,6 +6,7 @@ using System.IO;
 public class Game_World : MonoBehaviour
 {
     RandomChancePercentage randomChancePercentage = new RandomChancePercentage();
+    float hunger_modifier = 1;
     public int gameSpeed = 1;
     public int chanceOfPreset = 50, chanceOfNNCell = 50;
     ListAnaliser list_analysis = new ListAnaliser();
@@ -15,13 +16,15 @@ public class Game_World : MonoBehaviour
     public List<GameObject> borders = new List<GameObject>();
     public List<GameObject> pCells = new List<GameObject>();
     public List<GameObject> aCells = new List<GameObject>();
+    public List<GameObject> pCellsAlg = new List<GameObject>();
     public List<GameObject> foods = new List<GameObject>();
     public List<CellInfo> bestPCells = new List<CellInfo>();
+    public List<CellInfo> bestPCellsAlg = new List<CellInfo>();
     public List<CellInfo> bestACells = new List<CellInfo>();
     public GameObject foodBody, cellBodyP, cellBodyA, border_Body, cellBodyAlgP;
     public int cellPSpawn = 12, cellASpawn = 5;
     public int saveBestNum = 3;
-    public int savedCells = 0;
+    public int savedCells = 0, savedCellsP = 0, savedCellsPAlg = 0;
     public float foodSpawnRate = 0.05f;
     public int xrad=26, yrad=16;
     float nextSpawn = 0, nextSpawnCellA = 0, nextSpawnCellB = 0;
@@ -105,6 +108,7 @@ public class Game_World : MonoBehaviour
         chanceOfPreset = sourceOfData.chanceOfPreset;
         doBordersKill =sourceOfData.doBordersKill;
         chanceOfNNCell =sourceOfData.chanceOfNNCell;
+        hunger_modifier = sourceOfData.hunger_modifier;
         //cellPSpawn = sourceOfData.intData[0];
         //cellASpawn = sourceOfData.intData[1];
         //saveBestNum =sourceOfData.intData[2];
@@ -152,9 +156,10 @@ public class Game_World : MonoBehaviour
     void SavingIfNeeded(){
         if((restartWhenDead)&(saveBestNum>0)&started){
             //Debug.Log("DeadWorld");
-            if ((list_analysis.Leangh<GameObject>(pCells) == saveBestNum)&needToSaveP){
+            if ((list_analysis.Leangh<GameObject>(pCells) + list_analysis.Leangh<GameObject>(pCellsAlg) == saveBestNum)&needToSaveP){
                 needToSaveP = false;
                 SaveBestToList(pCells,bestPCells);
+                SaveBestToList(pCellsAlg,bestPCellsAlg);
             }
             if ((list_analysis.Leangh<GameObject>(aCells) == saveBestNum)&needToSaveA){
                 needToSaveA = false;
@@ -176,22 +181,31 @@ public class Game_World : MonoBehaviour
         foods.Clear();
     }
     void SpawnBasicSells(){
+        int p = 0, alg = 0;
         for(int i = 0; i< cellPSpawn; i++){
             if(randomChancePercentage.More(chanceOfNNCell)){
                 pCells.Add(Instantiate(cellBodyP,RandomVector2Gen(), Quaternion.identity));
+                pCells[p].GetComponent<Cell>().gameSpeed = gameSpeed;
+                pCells[p].GetComponent<Cell>().presetNNChance= chanceOfPreset;
+                pCells[p].GetComponent<Cell>().state="generated";
+                pCells[p].GetComponent<Cell>().hunger_modifier=hunger_modifier;
+                p++;
             }
             else{
-                pCells.Add(Instantiate(cellBodyAlgP,RandomVector2Gen(), Quaternion.identity));
+                pCellsAlg.Add(Instantiate(cellBodyAlgP,RandomVector2Gen(), Quaternion.identity));
+                pCellsAlg[alg].GetComponent<Cell>().gameSpeed = gameSpeed;
+                pCellsAlg[alg].GetComponent<Cell>().presetNNChance= chanceOfPreset;
+                pCellsAlg[alg].GetComponent<Cell>().state="generated";
+                pCellsAlg[alg].GetComponent<Cell>().hunger_modifier=hunger_modifier;
+                alg++;
             }
-            pCells[i].GetComponent<Cell>().gameSpeed = gameSpeed;
-            pCells[i].GetComponent<Cell>().presetNNChance= chanceOfPreset;
-            pCells[i].GetComponent<Cell>().state="generated";
         }
         for(int i = 0; i< cellASpawn; i++){
             aCells.Add(Instantiate(cellBodyA,RandomVector2Gen(), Quaternion.identity));
             aCells[i].GetComponent<Cell>().gameSpeed = gameSpeed;
             aCells[i].GetComponent<Cell>().presetNNChance= chanceOfPreset;
             aCells[i].GetComponent<Cell>().state="generated";
+            aCells[i].GetComponent<Cell>().hunger_modifier=hunger_modifier;
         }
     }
     bool ShouldGameRestart(){
@@ -203,6 +217,12 @@ public class Game_World : MonoBehaviour
             if(i>list_analysis.Leangh<GameObject>(pCells)- 1) break;
             Cell respawning_cell = pCells[i].GetComponent<Cell>();
             respawning_cell.CellInfoGet(bestPCells[savedCells -1 - i]);
+        }
+        for(int i = 0; i< savedCells; i++){
+            if(!started) break;
+            if(i>list_analysis.Leangh<GameObject>(pCellsAlg)- 1) break;
+            Cell respawning_cell = pCellsAlg[i].GetComponent<Cell>();
+            respawning_cell.CellInfoGet(bestPCellsAlg[savedCells -1 - i]);
         }
         for(int i = 0; i< savedCells; i++){
             if(!started) break;
@@ -253,6 +273,7 @@ public class Game_World : MonoBehaviour
     void Update()
     {
         list_analysis.clearFromNull<GameObject>(pCells);
+        list_analysis.clearFromNull<GameObject>(pCellsAlg);
         list_analysis.clearFromNull<GameObject>(aCells);
         SavingIfNeeded();
         if(ShouldGameRestart()){
@@ -286,6 +307,16 @@ public class Game_World : MonoBehaviour
                     coord[0] = (pCell.transform.position.x - watcher.transform.position.x)/MaxDistance;
                     coord[1] = (pCell.transform.position.y - watcher.transform.position.y)/MaxDistance;
                     nearestDistance =Vector3.Distance(watcher.transform.position, pCell.transform.position);
+                }
+            }
+        }
+        foreach(var pCell in pCellsAlg){
+            if((pCell !=watcher)&(pCell !=null)){
+                if(Vector3.Distance(watcher.transform.position, pCell.transform.position)<nearestDistance){
+                    coord[0] = (pCell.transform.position.x - watcher.transform.position.x)/MaxDistance;
+                    coord[1] = (pCell.transform.position.y - watcher.transform.position.y)/MaxDistance;
+                    nearestDistance =Vector3.Distance(watcher.transform.position, pCell.transform.position);
+                    //Debug.Log("to Attack = " + nearestDistance * 10000);
                 }
             }
         }

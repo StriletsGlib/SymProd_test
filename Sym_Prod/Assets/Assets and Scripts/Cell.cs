@@ -9,7 +9,7 @@ public abstract class Cell : MonoBehaviour
     public float sight, jump_leanght;
     public int food_min=400, food_max=1000;
     public int energy_divided = 999999, energy_count = -1, energy_max = 999999, gene_stability = 999999, hunger = 999999;
-    public int minimum_energy_divided = 2500;
+    public int minimum_energy_divided = 30000;
     public GameObject divisionBody;
     public string state = "generated";
     public float hunger_modifier = 1;
@@ -19,7 +19,7 @@ public abstract class Cell : MonoBehaviour
     {
         sight = (float)Random.Range(900, 1200) / 100;
         jump_leanght = (float)Random.Range(100, 300) / 100;
-        energy_divided = Random.Range(10000, 25000);
+        energy_divided = Random.Range(30000, 50000);
         //energy_count = Random.Range(50000, 75000);
         energy_count = 50000;
         energy_max = 1000000;
@@ -39,7 +39,7 @@ public abstract class Cell : MonoBehaviour
     public virtual void pregenNN(){
         Debug.Log("hey hey, people!");
     }
-    public void CellInfoGet(CellInfo copied_cell){
+    public virtual void CellInfoGet(CellInfo copied_cell){
         sight = copied_cell.sight;
         jump_leanght = copied_cell.jump_leanght;
         food_min = copied_cell.food_min;
@@ -106,7 +106,14 @@ public abstract class Cell : MonoBehaviour
         Debug.Log("hey hey, people!");
     }
      private void Division(){
-        GameObject newObject = Instantiate(divisionBody);
+         float xst = gameObject.transform.position.x;
+         float yst = gameObject.transform.position.y;
+         float zst = gameObject.transform.position.z;
+         float rx = ((float)Random.Range(-5, 5))/50;
+         float ry = ((float)Random.Range(-5, 5))/50;
+         gameObject.transform.position = new Vector3(xst + rx, yst + ry, zst);
+         Vector2 startVector = new Vector2(xst - rx, yst - ry);
+        GameObject newObject = Instantiate(divisionBody,startVector, Quaternion.identity);
         energy_count = energy_count/2;
         Cell dividedCell = newObject.GetComponent<Cell>();
         dividedCell.Inherit(sight, jump_leanght, energy_divided, energy_count, gene_stability, network);

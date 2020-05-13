@@ -25,6 +25,7 @@ public class SaveStartingData : MonoBehaviour
         GameObject UseNNChance = GameObject.Find("InputNNChance");
         GameObject DoRestart = GameObject.Find("DoRestart");
         GameObject DBK = GameObject.Find("DoBordersKill");
+        GameObject InpHungerModifier = GameObject.Find("InputHungerModifier");
         ImportantData startData = GameObject.Find("Start_Data").GetComponent<ImportantData>();
         startData.cellASpawn=tryToTransform(InpAC.GetComponent<InputField>().text,startData.cellASpawn);
         startData.cellPSpawn=tryToTransform(InpPC.GetComponent<InputField>().text,startData.cellPSpawn);
@@ -37,7 +38,7 @@ public class SaveStartingData : MonoBehaviour
         startData.chanceOfNNCell=tryToTransform(UseNNChance.GetComponent<InputField>().text,startData.chanceOfNNCell);
         
         startData.chanceOfPreset=tryToTransform(PresetChance.GetComponent<InputField>().text,startData.chanceOfPreset);
-        
+        startData.hunger_modifier=tryToTransform(InpHungerModifier.GetComponent<InputField>().text,startData.hunger_modifier);
         //startData.cellASpawn=tryToTransform(InpAC.GetComponent<InputField>().text,startData.cellASpawn);
         //startData.cellASpawn=tryToTransform(InpAC.GetComponent<InputField>().text,startData.cellASpawn);
         //startData.cellASpawn=tryToTransform(InpAC.GetComponent<InputField>().text,startData.cellASpawn);
