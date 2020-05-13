@@ -5,6 +5,8 @@ using System;
 
 public class AlgPeacefull_Cell : Cell
 {
+    RandomChancePercentage randomChancePercentage = new RandomChancePercentage();
+    public double fearOfEnemies = 4, avoidness = 4;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +19,9 @@ public class AlgPeacefull_Cell : Cell
     //This was created --
     public float[] whereToGo(float[] food1, float[] food2, float[] food3, float[] enemy, float[] friend)
     {
-        double food1_K = (rasst(food1,0)-1/rasst(food1,enemy))*(rasst(food1,0)-1/rasst(friend,0));
-        double food2_K = (rasst(food2, 0) - 1 / rasst(food2, enemy)) * (rasst(food2, 0) - 1 / rasst(friend, 0));
-        double food3_K = (rasst(food3, 0) - 1 / rasst(food3, enemy)) * (rasst(food3, 0) - 1 / rasst(friend, 0));
+        double food1_K = (rasst(food1,0)-fearOfEnemies/rasst(food1,enemy))*(rasst(food1,0)-avoidness/rasst(friend,0));
+        double food2_K = (rasst(food2, 0) - fearOfEnemies / rasst(food2, enemy)) * (rasst(food2, 0) - avoidness / rasst(friend, 0));
+        double food3_K = (rasst(food3, 0) - fearOfEnemies / rasst(food3, enemy)) * (rasst(food3, 0) - avoidness / rasst(friend, 0));
         if (food1_K <=food2_K && food1_K <=food3_K)
         { return food1; }
         else {
@@ -69,4 +71,16 @@ public class AlgPeacefull_Cell : Cell
         world = GameObject.Find("GameWorld_1").GetComponent<Game_World>();
         world.pCells.Remove(gameObject);
     }
+    override public void mutateBehaviour(){
+        if (randomChancePercentage.More(gene_stability)){
+            fearOfEnemies = fearOfEnemies + (double)UnityEngine.Random.Range(-10,10)/10;
+        }
+        if (randomChancePercentage.More(gene_stability)){
+            avoidness = avoidness + (double)UnityEngine.Random.Range(-10,10)/10;
+        }
+        if(avoidness*fearOfEnemies == 0){
+            ClearFromWorld();
+        }
+    }
 }
+

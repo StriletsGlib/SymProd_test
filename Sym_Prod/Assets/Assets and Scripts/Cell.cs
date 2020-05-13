@@ -70,13 +70,15 @@ public abstract class Cell : MonoBehaviour
         if (RandomChance(gene_stability)){
             gene_stability = gene_stability + (Random.Range(10, 15) - Random.Range(10, 15));
         }
+        mutateBehaviour();
+    }
+    public virtual void mutateBehaviour(){
         network.mutate(gene_stability);
         if((sight*jump_leanght*(energy_divided-minimum_energy_divided+1))<=0){
             ClearFromWorld();
             Destroy(gameObject);
         }
     }
-    
     private void Start()
     {
         if (state == "generated") {GenCell();}
