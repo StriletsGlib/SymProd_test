@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSpeed: 1
-  chanceOfPreset: 50
+  chanceOfPreset: 100
   chanceOfNNCell: 50
   WhereToStoreCells: Stored.Cells.txt
   ShouldStoreCellsInFile: 0
