@@ -17,6 +17,6 @@ public class SymProdMenuManager : MonoBehaviour
         SceneManager.LoadScene("Settings");
     }
     public void exitGame(){
-        //SceneManager.LoadScene("MainScene");
+        Application.Quit();
     }
 }

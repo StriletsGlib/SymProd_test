@@ -8,7 +8,7 @@ public class Attacking_Cell : Cell
     private void Start()
     {
         if (state == "generated") {GenCell();}
-        hunger = (int)(((jump_leanght)/10 + gene_stability/25)*hunger_modifier);
+        hunger = (int)(((jump_leanght) + gene_stability/25)*hunger_modifier);
     }
     ~Attacking_Cell(){
         //Game_World world;
