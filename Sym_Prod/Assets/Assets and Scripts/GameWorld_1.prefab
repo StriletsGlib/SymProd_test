@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1398857409884189320}
   - component: {fileID: 1398857409884189327}
   - component: {fileID: 1398857409884189326}
+  - component: {fileID: 4676952759967450023}
   m_Layer: 0
   m_Name: GameWorld_1
   m_TagString: Untagged
@@ -130,3 +131,15 @@ MonoBehaviour:
   spawnCells: 0
   restartWhenDead: 0
   doBordersKill: 1
+--- !u!114 &4676952759967450023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398857409884189325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c22d410cb704f4276a17621a3c2acdaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
