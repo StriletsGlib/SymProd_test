@@ -18,7 +18,7 @@ public class keyBoardManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape)){
             SceneManager.LoadScene("Menu");
         }
-        if(Input.GetKeyDown(KeyCode.Plus)){
+        if(Input.GetKeyDown(KeyCode.Space)){
             camera.orthographicSize +=0.5f;
         }
         if(Input.GetKeyDown(KeyCode.Minus)){
