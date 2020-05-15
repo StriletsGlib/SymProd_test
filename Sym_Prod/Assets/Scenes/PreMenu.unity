@@ -250,8 +250,8 @@ MonoBehaviour:
   gameSpeed: 1
   chanceOfPreset: 100
   chanceOfNNCell: 50
-  WhereToStoreCells: Stored.Cells.txt
-  ShouldStoreCellsInFile: 0
+  WhereToStoreCells: place\Stored.Cells.txt
+  ShouldStoreCellsInFile: 1
   borderX: 30
   borderY: 15
   hunger_modifier: 1

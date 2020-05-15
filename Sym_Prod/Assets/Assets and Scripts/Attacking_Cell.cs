@@ -31,7 +31,7 @@ public class Attacking_Cell : Cell
         world.aCells.Remove(gameObject);
     }
     override public void pregenNN(){
-        float[] a = new float[] {0.7f, 0.7f, 0f, 0f, 0f, 0f, 0, 0, 1f, 1f, 1f, 1f};
+        float[] a = new float[24] {1f, 1f, 0f, 0f, 0f, 0f, 0f, 0f, 1f, 1f, 1f, 1f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f};
         network = new NN(a);
         network.state = " preset ";
     }

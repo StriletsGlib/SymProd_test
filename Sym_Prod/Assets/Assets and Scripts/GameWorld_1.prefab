@@ -96,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSpeed: 1
   chanceOfPreset: 50
+  chanceOfNNCell: 50
   WhereToStoreCells: Stored.Cells.txt
   ShouldStoreCellsInFile: 0
   borderX: 31
@@ -103,6 +104,7 @@ MonoBehaviour:
   borders: []
   pCells: []
   aCells: []
+  pCellsAlg: []
   foods: []
   foodBody: {fileID: 8698007405910006080, guid: 88063cbdd58f1413284bc5bb22bc0059,
     type: 3}
@@ -112,10 +114,14 @@ MonoBehaviour:
     type: 3}
   border_Body: {fileID: 824632510409466181, guid: 51d3774c17b3941d7af95093cbe6608f,
     type: 3}
+  cellBodyAlgP: {fileID: 4645622539692510738, guid: 44648ef74c48b412eb9d5dab5c55ca70,
+    type: 3}
   cellPSpawn: 30
   cellASpawn: 15
   saveBestNum: 10
   savedCells: 0
+  savedCellsP: 0
+  savedCellsPAlg: 0
   foodSpawnRate: 0.05
   xrad: 32
   yrad: 18
@@ -123,3 +129,4 @@ MonoBehaviour:
   cellPSpawnRate: 10
   spawnCells: 0
   restartWhenDead: 0
+  doBordersKill: 1

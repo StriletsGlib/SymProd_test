@@ -14,12 +14,13 @@ public abstract class Cell : MonoBehaviour
     public string state = "generated";
     public float hunger_modifier = 1;
     public NN network = new NN();
+    int ticksUntillNextMove = 0;
     Vector2 prev_Move = new Vector2(0,1);
     public void GenCell()
     {
         sight = (float)Random.Range(900, 1200) / 100;
         jump_leanght = (float)Random.Range(100, 300) / 100;
-        energy_divided = Random.Range(30000, 50000);
+        energy_divided = Random.Range(60000, 75000);
         //energy_count = Random.Range(50000, 75000);
         energy_count = 50000;
         energy_max = 1000000;
@@ -105,20 +106,31 @@ public abstract class Cell : MonoBehaviour
     public virtual void sendToList(GameObject what){
         Debug.Log("hey hey, people!");
     }
-     private void Division(){
-         float xst = gameObject.transform.position.x;
-         float yst = gameObject.transform.position.y;
-         float zst = gameObject.transform.position.z;
-         float rx = ((float)Random.Range(-5, 5))/50;
-         float ry = ((float)Random.Range(-5, 5))/50;
-         gameObject.transform.position = new Vector3(xst + rx, yst + ry, zst);
-         Vector2 startVector = new Vector2(xst - rx, yst - ry);
+    private void Division(){
+        float xst = gameObject.transform.position.x;
+        float yst = gameObject.transform.position.y;
+        float zst = gameObject.transform.position.z;
+        float rx = ((float)Random.Range(-1, 0))/10;
+        if(rx == 0){rx = 0.1f;}
+        float ry = ((float)Random.Range(-1, 0))/50;
+        if(ry == 0){ry = 0.1f;}
+        gameObject.transform.position = new Vector3(xst + rx, yst + ry, zst);
+        //Quaternion tempQ = new Quaternion();
+        //tempQ.identity;
+        Vector2 startVector = new Vector2(xst - rx, yst - ry);
+        
         GameObject newObject = Instantiate(divisionBody,startVector, Quaternion.identity);
         energy_count = energy_count/2;
         Cell dividedCell = newObject.GetComponent<Cell>();
         dividedCell.Inherit(sight, jump_leanght, energy_divided, energy_count, gene_stability, network);
         dividedCell.SetState("divided");
         dividedCell.Mutate();
+        //
+        Vector2 fixThis = (Vector2)newObject.transform.rotation.eulerAngles;
+        float angle = Vector2.SignedAngle(dividedCell.prev_Move,fixThis);
+        newObject.transform.RotateAround(new Vector2(newObject.transform.position.x, newObject.transform.position.y), Vector3.forward, angle);
+        //newObject.transform.rotation.eulerAngles
+        //
         sendToList(newObject);
         //Debug.Log(dividedCell.sight);
         //a.GetComponent<Position>();
@@ -155,6 +167,14 @@ public abstract class Cell : MonoBehaviour
         world = GameObject.Find("GameWorld_1").GetComponent<Game_World>();
         k = world.Searching(gameObject, sight);
         float[] res = network.think(k);
+        if((res[0]==0)&(res[1]==0)&(ticksUntillNextMove >0)){
+            res[0] = (float)(Random.Range(0,100)*2-100)/100;
+            res[1] = (float)(Random.Range(0,100)*2-100)/100;
+            ticksUntillNextMove = 1000;
+        }
+        if(ticksUntillNextMove>0){
+            ticksUntillNextMove--;
+        }
         Vector2 movement_vector = new Vector2(res[0], res[1]);
         //Debug.Log("resx = " + res[0]*100 + "resy = " + res[1]);
         //Debug.Log("resx1 = " + movement_vector.x + "resy1 = " + movement_vector.y);

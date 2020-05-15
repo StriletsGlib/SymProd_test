@@ -26,7 +26,7 @@ public class Peacefull_Cell : Cell
         world.pCells.Remove(gameObject);
     }
     override public void pregenNN(){
-        float[] a = new float[] {0f, 0f, 0.5f, 0.5f, -0.9f, -0.9f, -0.9f, -0.9f, 1f, 1f, 1f, 1f};
+        float[] a = new float[24] {0f, 0f, 0.025f, 0.025f, -1f, -1f, 0f, 0f, 1f, 1f, 1f, 1f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f};
         network = new NN(a);
         network.state = " preset ";
     }

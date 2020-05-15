@@ -42,6 +42,7 @@ public class Game_World : MonoBehaviour
         float maxVal = float.MaxValue;
         float nearestDistance = maxVal;
         GameObject tempNear = null;
+        if (list_analysis.Leangh<GameObject>(fromWhere)<3){PanicFoodSpawn();}
         foreach(var item in fromWhere){
             if(Vector3.Distance(center.transform.position, item.transform.position)<nearestDistance){
                 tempNear = item;
@@ -334,31 +335,30 @@ public class Game_World : MonoBehaviour
         nearestDistance = MaxDistance;
         foreach(var food in foods){
             if((Vector3.Distance(watcher.transform.position, food.transform.position)<nearestDistance)&(food !=null)){
-                float fdx, fdy;
+                //float fdx, fdy;
                 MyMathModule myMathModule = new MyMathModule();
-                fdx = (food.transform.position.x - watcher.transform.position.x)/MaxDistance;
-                fdy = (food.transform.position.y - watcher.transform.position.y)/MaxDistance;
-                if ((myMathModule.floatMod(fdx - coord[4])>0.01)&(myMathModule.floatMod(fdy - coord[5])>0.01)){
-                    coord[2] = (food.transform.position.x - watcher.transform.position.x)/MaxDistance;
-                    coord[3] = (food.transform.position.y - watcher.transform.position.y)/MaxDistance;
+                //fdx = (food.transform.position.x - watcher.transform.position.x)/MaxDistance;
+                //fdy = (food.transform.position.y - watcher.transform.position.y)/MaxDistance;
+                //if ((myMathModule.floatMod(fdx - coord[4])>0.01)&(myMathModule.floatMod(fdy - coord[5])>0.01)){
+                coord[2] = (food.transform.position.x - watcher.transform.position.x)/MaxDistance;
+                coord[3] = (food.transform.position.y - watcher.transform.position.y)/MaxDistance;
                     nearestDistance =Vector3.Distance(watcher.transform.position, food.transform.position);
-                }
+                //}
                 //if ((coord[2]-coord[4]<0.01)||(coord[2]-coord[4]<0.01))
-                coord[6] = (food.transform.position.x - coord[4]*MaxDistance)/MaxDistance;
-                coord[7] = (food.transform.position.y - coord[5]*MaxDistance)/MaxDistance;
+                //coord[6] = (food.transform.position.x - coord[4]*MaxDistance)/MaxDistance;
+                //coord[7] = (food.transform.position.y - coord[5]*MaxDistance)/MaxDistance;
                  //Debug.Log("to Food = " + nearestDistance * 10000);
             }
         }
 
-        /*nearestDistance = MaxDistance;
+        nearestDistance = MaxDistance;
         foreach(var border in borders){
-            if(Vector3.Distance(watcher.transform.position, border.transform.position)<nearestDistance)){
+            if((Vector3.Distance(watcher.transform.position, border.transform.position)<nearestDistance)&(border!=null)){
                 coord[6] = (border.transform.position.x - watcher.transform.position.x)/MaxDistance;
                 coord[7] = (border.transform.position.y - watcher.transform.position.y)/MaxDistance;
                 nearestDistance =Vector3.Distance(watcher.transform.position, border.transform.position);
             }
         }
-        */
         return coord;
     }
 }
