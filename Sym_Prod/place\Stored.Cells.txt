@@ -1,0 +1,113 @@
+Peacefull_Cell
+ sight= 9.37 jump_leanght= 2.78 food_min= 2000 food_max= 2000 energy_divided= 70040 energy_max = 1000000 gene_stability= 43 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 11.43 jump_leanght= 2.57 food_min= 2000 food_max= 2000 energy_divided= 61491 energy_max = 1000000 gene_stability= 39 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.030 -0.009 -0.005 -0.008 0.004 0.008 -0.003 0.036 -0.019 -0.002 -0.015 -0.008 0.036 -0.031 0.004 0.014 -0.016 0.007 -0.025 -1.000 -0.020 -0.018 -0.997 -0.029 -0.008 0.001 -0.012 -0.003 -0.015 0.001 -0.030 0.016 -0.008 0.993 0.999 -0.022 -0.008 0.970 0.976 0.000  preset 
+
+Peacefull_Cell
+ sight= 9.96 jump_leanght= 2.16 food_min= 2000 food_max= 2000 energy_divided= 72270 energy_max = 1000000 gene_stability= 25 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 10.49 jump_leanght= 2.88 food_min= 2000 food_max= 2000 energy_divided= 68462 energy_max = 1000000 gene_stability= 12 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 9.20 jump_leanght= 1.71 food_min= 2000 food_max= 2000 energy_divided= 63705 energy_max = 1000000 gene_stability= 41 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 10.31 jump_leanght= 1.72 food_min= 2000 food_max= 2000 energy_divided= 61127 energy_max = 1000000 gene_stability= 18 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 9.64 jump_leanght= 2.25 food_min= 2000 food_max= 2000 energy_divided= 74222 energy_max = 1000000 gene_stability= 41 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 10.41 jump_leanght= 2.60 food_min= 2000 food_max= 2000 energy_divided= 63154 energy_max = 1000000 gene_stability= 44 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 10.51 jump_leanght= 2.57 food_min= 2000 food_max= 2000 energy_divided= 74696 energy_max = 1000000 gene_stability= 31 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 11.10 jump_leanght= 2.54 food_min= 2000 food_max= 2000 energy_divided= 70828 energy_max = 1000000 gene_stability= 17 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 -0.009 0.000 0.000 0.025 0.000 -0.010 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 -0.010 0.996 0.994 0.000  preset 
+
+Peacefull_Cell
+ sight= 10.46 jump_leanght= 2.11 food_min= 2000 food_max= 2000 energy_divided= 72197 energy_max = 1000000 gene_stability= 32 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.020 -0.001 0.000 0.005 0.004 -0.013 -0.008 -0.008 -0.003 0.030 -0.006 -0.010 0.014 0.016 -0.012 -0.007 -0.013 -0.001 0.015 -1.000 -0.010 -0.002 -1.000 0.012 -0.007 -0.012 0.008 0.010 0.002 0.012 0.016 0.012 0.005 0.994 0.998 -0.021 0.005 0.992 1.000 0.003  preset 
+
+Peacefull_Cell
+ sight= 10.73 jump_leanght= 2.17 food_min= 2000 food_max= 2000 energy_divided= 69638 energy_max = 1000000 gene_stability= 31 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 11.97 jump_leanght= 1.90 food_min= 2000 food_max= 2000 energy_divided= 69796 energy_max = 1000000 gene_stability= 45 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 10.32 jump_leanght= 2.98 food_min= 2000 food_max= 2000 energy_divided= 71916 energy_max = 1000000 gene_stability= 48 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 10.39 jump_leanght= 2.52 food_min= 2000 food_max= 2000 energy_divided= 66464 energy_max = 1000000 gene_stability= 12 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 9.07 jump_leanght= 2.18 food_min= 2000 food_max= 2000 energy_divided= 67052 energy_max = 1000000 gene_stability= 47 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 9.21 jump_leanght= 2.34 food_min= 2000 food_max= 2000 energy_divided= 64845 energy_max = 1000000 gene_stability= 15 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 10.97 jump_leanght= 2.32 food_min= 2000 food_max= 2000 energy_divided= 65248 energy_max = 1000000 gene_stability= 45 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 11.22 jump_leanght= 2.71 food_min= 2000 food_max= 2000 energy_divided= 63363 energy_max = 1000000 gene_stability= 23 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= -0.018 0.012 0.018 -0.004 -0.005 -0.017 -0.001 -0.018 0.027 -0.014 -0.041 -0.025 0.039 -0.026 -0.019 0.025 0.018 -0.017 -0.027 -1.000 0.024 -0.012 -0.998 -0.016 -0.013 0.004 -0.002 -0.002 -0.045 0.005 -0.023 0.020 0.006 1.000 0.985 0.010 0.012 0.989 1.000 0.003  preset 
+
+Peacefull_Cell
+ sight= 11.80 jump_leanght= 1.98 food_min= 2000 food_max= 2000 energy_divided= 65794 energy_max = 1000000 gene_stability= 18 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= -0.004 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 -0.003 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 -0.007 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 -0.008 0.000 -0.008 0.000 0.997 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 11.28 jump_leanght= 2.25 food_min= 2000 food_max= 2000 energy_divided= 70279 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.003 0.007 0.006 -0.017 0.009 -0.010 0.009 -0.003 -0.032 0.014 -0.030 -0.014 0.032 -0.026 0.032 0.006 0.035 -0.007 -0.055 -0.990 -0.013 -0.027 -0.976 0.004 -0.015 -0.022 -0.005 0.015 -0.023 0.007 0.004 0.002 -0.014 0.998 1.000 0.009 -0.009 0.994 0.990 0.005  preset 
+
+Peacefull_Cell
+ sight= 11.23 jump_leanght= 1.28 food_min= 2000 food_max= 2000 energy_divided= 61421 energy_max = 1000000 gene_stability= 22 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 11.80 jump_leanght= 1.98 food_min= 2000 food_max= 2000 energy_divided= 65794 energy_max = 1000000 gene_stability= 18 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= -0.004 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 -0.003 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 -0.007 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 -0.008 0.000 -0.008 0.000 0.997 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 11.28 jump_leanght= 2.19 food_min= 2000 food_max= 2000 energy_divided= 70275 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.003 0.007 0.006 -0.017 0.009 -0.010 0.009 -0.003 -0.032 0.014 -0.030 -0.014 0.032 -0.026 0.032 0.006 0.035 -0.007 -0.055 -0.990 -0.013 -0.027 -0.976 0.004 -0.015 -0.022 -0.005 0.015 -0.023 0.007 0.004 0.002 -0.014 0.998 1.000 0.009 -0.009 0.994 0.990 0.005  preset 
+
+Peacefull_Cell
+ sight= 11.28 jump_leanght= 2.25 food_min= 2000 food_max= 2000 energy_divided= 70279 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.003 0.007 0.006 -0.017 0.009 -0.010 0.009 -0.003 -0.032 0.014 -0.030 -0.014 0.032 -0.026 0.032 0.006 0.035 -0.007 -0.055 -0.990 -0.013 -0.027 -0.976 0.004 -0.015 -0.022 -0.005 0.015 -0.023 0.007 0.004 0.002 -0.014 0.998 1.000 0.009 -0.009 0.994 0.990 0.005  preset 
+
+Peacefull_Cell
+ sight= 11.28 jump_leanght= 2.25 food_min= 2000 food_max= 2000 energy_divided= 70282 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.003 0.007 0.006 -0.017 0.009 -0.010 0.009 -0.003 -0.032 0.014 -0.030 -0.014 0.032 -0.026 0.032 0.006 0.035 -0.007 -0.055 -0.990 -0.013 -0.027 -0.976 0.004 -0.015 -0.022 -0.005 0.015 -0.023 0.007 0.004 0.002 -0.014 0.998 1.000 0.009 -0.009 0.994 0.990 0.005  preset 
+
+Peacefull_Cell
+ sight= 11.28 jump_leanght= 2.14 food_min= 2000 food_max= 2000 energy_divided= 70275 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.003 0.007 0.006 -0.017 0.009 -0.010 0.009 -0.003 -0.032 0.014 -0.030 -0.014 0.032 -0.026 0.032 0.006 0.035 -0.007 -0.055 -0.990 -0.013 -0.027 -0.976 0.004 -0.015 -0.022 -0.005 0.015 -0.023 0.007 0.004 0.002 -0.014 0.998 1.000 0.009 -0.009 0.994 0.990 0.005  preset 
+
+Peacefull_Cell
+ sight= 11.28 jump_leanght= 2.22 food_min= 2000 food_max= 2000 energy_divided= 70278 energy_max = 1000000 gene_stability= 26 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.003 0.007 0.006 -0.017 0.009 -0.010 0.009 -0.003 -0.032 0.014 -0.030 -0.014 0.032 -0.026 0.032 0.006 0.035 -0.007 -0.055 -0.990 -0.013 -0.027 -0.976 0.004 -0.015 -0.022 -0.005 0.015 -0.023 0.007 0.004 0.002 -0.014 0.998 1.000 0.009 -0.009 0.994 0.990 0.005  preset 
+
+Peacefull_Cell
+ sight= 11.28 jump_leanght= 2.14 food_min= 2000 food_max= 2000 energy_divided= 70275 energy_max = 1000000 gene_stability= 28 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.003 0.007 0.006 -0.017 0.009 -0.010 0.009 -0.003 -0.032 0.014 -0.030 -0.014 0.032 -0.026 0.032 0.006 0.035 -0.007 -0.055 -0.990 -0.013 -0.027 -0.976 0.004 -0.015 -0.022 -0.005 0.015 -0.023 0.007 0.004 0.002 -0.014 0.998 1.000 0.009 -0.009 0.994 0.990 0.005  preset 
+
+Peacefull_Cell
+ sight= 9.43 jump_leanght= 2.86 food_min= 2000 food_max= 2000 energy_divided= 70970 energy_max = 1000000 gene_stability= 12 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 11.48 jump_leanght= 1.34 food_min= 2000 food_max= 2000 energy_divided= 68083 energy_max = 1000000 gene_stability= 41 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 11.68 jump_leanght= 2.67 food_min= 2000 food_max= 2000 energy_divided= 61389 energy_max = 1000000 gene_stability= 29 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= -0.018 -0.003 0.035 0.017 -0.003 -0.018 0.002 0.011 0.004 0.012 0.008 0.009 0.024 0.001 -0.026 -0.023 0.004 0.011 -0.014 -0.980 -0.006 -0.017 -0.996 -0.014 0.010 -0.014 0.015 -0.015 -0.005 0.010 -0.007 0.011 0.013 0.994 0.991 -0.037 0.015 0.988 0.991 -0.002  preset 
+
+Peacefull_Cell
+ sight= 10.90 jump_leanght= 1.36 food_min= 2000 food_max= 2000 energy_divided= 60444 energy_max = 1000000 gene_stability= 12 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 9.18 jump_leanght= 1.17 food_min= 2000 food_max= 2000 energy_divided= 72909 energy_max = 1000000 gene_stability= 37 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 10.91 jump_leanght= 1.26 food_min= 2000 food_max= 2000 energy_divided= 73990 energy_max = 1000000 gene_stability= 10 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 9.93 jump_leanght= 1.58 food_min= 2000 food_max= 2000 energy_divided= 61124 energy_max = 1000000 gene_stability= 12 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -1.000 0.000 0.000 -1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 0.000 0.000 1.000 1.000 0.000  preset 
+
+Peacefull_Cell
+ sight= 9.17 jump_leanght= 1.22 food_min= 2000 food_max= 2000 energy_divided= 68012 energy_max = 1000000 gene_stability= 30 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= -0.006 -0.001 0.013 -0.008 0.004 -0.029 -0.008 -0.017 0.012 0.021 0.016 -0.025 -0.014 -0.010 -0.006 -0.016 0.028 -0.017 0.000 -1.000 -0.050 -0.033 -0.991 -0.057 -0.016 0.009 -0.023 0.013 -0.038 0.015 0.010 -0.024 -0.018 0.985 0.949 0.006 -0.018 0.977 0.992 0.014  preset 
+
+Peacefull_Cell
+ sight= 11.06 jump_leanght= 2.73 food_min= 2000 food_max= 2000 energy_divided= 60600 energy_max = 1000000 gene_stability= 36 minimum_energy_divided= 30000 hunger_modifier = 1.00 WeightsNN= 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.025 0.000 0.000 0.000 0.000 0.000 0.000 -

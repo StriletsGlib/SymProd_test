@@ -217,19 +217,19 @@ public class Game_World : MonoBehaviour
             if(!started) break;
             if(i>list_analysis.Leangh<GameObject>(pCells)- 1) break;
             Cell respawning_cell = pCells[i].GetComponent<Cell>();
-            respawning_cell.CellInfoGet(bestPCells[savedCells -1 - i]);
+            if(savedCells -1 - i >=1) respawning_cell.CellInfoGet(bestPCells[savedCells -1 - i]);
         }
         for(int i = 0; i< savedCells; i++){
             if(!started) break;
             if(i>list_analysis.Leangh<GameObject>(pCellsAlg)- 1) break;
             Cell respawning_cell = pCellsAlg[i].GetComponent<Cell>();
-            respawning_cell.CellInfoGet(bestPCellsAlg[savedCells -1 - i]);
+            if(savedCells -1 - i >=1) respawning_cell.CellInfoGet(bestPCellsAlg[savedCells -1 - i]);
         }
         for(int i = 0; i< savedCells; i++){
             if(!started) break;
             if(i>list_analysis.Leangh<GameObject>(aCells) - 1) break;
             Cell respawning_cell = pCells[i].GetComponent<Cell>();
-            respawning_cell.CellInfoGet(bestACells[savedCells - 1 - i]);
+            if(savedCells -1 - i >=1) respawning_cell.CellInfoGet(bestACells[savedCells - 1 - i]);
         }
     }
     void GameRestart(){
@@ -259,7 +259,9 @@ public class Game_World : MonoBehaviour
     void RateSpawn(){
         if (Time.time > nextSpawn) {
             nextSpawn = Time.time + foodSpawnRate/gameSpeed;
-            foods.Add(Instantiate(foodBody,RandomVector2Gen(), Quaternion.identity));
+            GameObject addedFood = Instantiate(foodBody,RandomVector2Gen(), Quaternion.identity);
+            addedFood.GetComponent<Food_Exist>().time = addedFood.GetComponent<Food_Exist>().time/gameSpeed;
+            foods.Add(addedFood);
         }
         if (spawnCells&(Time.time > cellASpawnRate)) {
             nextSpawnCellA = Time.time + cellPSpawnRate/gameSpeed;

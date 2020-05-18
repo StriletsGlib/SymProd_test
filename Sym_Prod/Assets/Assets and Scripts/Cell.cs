@@ -126,7 +126,8 @@ public abstract class Cell : MonoBehaviour
         dividedCell.SetState("divided");
         dividedCell.Mutate();
         //
-        Vector2 fixThis = (Vector2)newObject.transform.rotation.eulerAngles;
+        Vector2 fixThis = new Vector2(0,1);
+        //Vector2 fixThis = (Vector2)newObject.transform.rotation.eulerAngles;
         float angle = Vector2.SignedAngle(dividedCell.prev_Move,fixThis);
         newObject.transform.RotateAround(new Vector2(newObject.transform.position.x, newObject.transform.position.y), Vector3.forward, angle);
         //newObject.transform.rotation.eulerAngles
