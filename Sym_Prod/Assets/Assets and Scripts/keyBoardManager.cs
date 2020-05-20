@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class keyBoardManager : MonoBehaviour
 {
-    Camera camera;
+    public Camera camera;
     // Start is called before the first frame update
     void Start()
     {
-        camera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        //camera = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
